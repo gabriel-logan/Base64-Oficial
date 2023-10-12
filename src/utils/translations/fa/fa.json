@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "سلام",
+        "Erro": "خطا",
+        "O texo não é um codigo base64 valido": "متن یک کد base64 معتبر نیست",
+        "O valor de entrada não deve ser uma string vazia": "مقدار ورودی نباید یک رشتۀ خالی باشد",
+        "Mudar idioma": "تغییر زبان",
+        "Base 64": "پایه 64",
+        "Criptografar": "رمزگذاری",
+        "Descriptografar": "رمزگشایی",
+        "Digite algo ou cole aqui o código": "چیزی تایپ کنید یا کد را در اینجا بچسبانید",
+        "Caracteres": "کاراکتر",
+        "Recortar": "برش",
+        "Copiar": "کپی",
+        "Colar": "جای گذاری",
+        "Limpar": "روشن",
+        "Ajude o dev": "به Dev کمک کنید: ",
+        "Buy me a coffee": "یه قهوه برام بخر"
+    }
+}

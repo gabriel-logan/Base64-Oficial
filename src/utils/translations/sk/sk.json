@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Dobrý deň",
+        "Erro": "Chyba",
+        "O texo não é um codigo base64 valido": "Text nie je platným kódom base64",
+        "O valor de entrada não deve ser uma string vazia": "Vstupná hodnota by nemala byť prázdny reťazec",
+        "Mudar idioma": "Zmeniť jazyk",
+        "Base 64": "Základňa 64",
+        "Criptografar": "Šifrovať",
+        "Descriptografar": "Dešifrovať",
+        "Digite algo ou cole aqui o código": "Sem niečo zadajte alebo prilepte kód",
+        "Caracteres": "Znaky",
+        "Recortar": "Rezať",
+        "Copiar": "Kopírovať",
+        "Colar": "Prilepiť",
+        "Limpar": "Jasný",
+        "Ajude o dev": "Pomôžte vývojárovi: ",
+        "Buy me a coffee": "Kúpte mi kávu"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Привет",
+        "Erro": "Ошибка",
+        "O texo não é um codigo base64 valido": "Текст не является допустимым кодом base64",
+        "O valor de entrada não deve ser uma string vazia": "Входное значение не должно быть пустой строкой",
+        "Mudar idioma": "Изменение языка",
+        "Base 64": "База 64",
+        "Criptografar": "Шифровать",
+        "Descriptografar": "Расшифровать",
+        "Digite algo ou cole aqui o código": "Введите что-нибудь или вставьте код сюда",
+        "Caracteres": "Письмена",
+        "Recortar": "Резать",
+        "Copiar": "Копировать",
+        "Colar": "Паста",
+        "Limpar": "Ясный",
+        "Ajude o dev": "Помогите разработчику: ",
+        "Buy me a coffee": "Купи мне кофе"
+    }
+}

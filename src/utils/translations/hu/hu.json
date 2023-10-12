@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Üdvözlöm",
+        "Erro": "Hiba",
+        "O texo não é um codigo base64 valido": "A szöveg nem érvényes base64 kód",
+        "O valor de entrada não deve ser uma string vazia": "A bemeneti érték nem lehet üres sztring",
+        "Mudar idioma": "Nyelv módosítása",
+        "Base 64": "64-es alap",
+        "Criptografar": "Titkosít",
+        "Descriptografar": "Visszafejt",
+        "Digite algo ou cole aqui o código": "Írjon be valamit, vagy illessze be ide a kódot",
+        "Caracteres": "Karakterek",
+        "Recortar": "Vág",
+        "Copiar": "Másolat",
+        "Colar": "Paszta",
+        "Limpar": "Világos",
+        "Ajude o dev": "Segítsen a fejlesztőnek: ",
+        "Buy me a coffee": "Vegyél nekem egy kávét"
+    }
+}

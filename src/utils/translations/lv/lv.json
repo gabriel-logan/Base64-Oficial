@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Labdien",
+        "Erro": "Kļūda",
+        "O texo não é um codigo base64 valido": "Teksts nav derīgs base64 kods",
+        "O valor de entrada não deve ser uma string vazia": "Ievades vērtība nedrīkst būt tukša virkne",
+        "Mudar idioma": "Mainīt valodu",
+        "Base 64": "Bāze 64",
+        "Criptografar": "Šifrēt",
+        "Descriptografar": "Atšifrēt",
+        "Digite algo ou cole aqui o código": "Ierakstiet kaut ko vai ielīmējiet kodu šeit",
+        "Caracteres": "Rakstzīmes",
+        "Recortar": "Griezt",
+        "Copiar": "Kopija",
+        "Colar": "Ielīmēt",
+        "Limpar": "Dzidrs",
+        "Ajude o dev": "Palīdziet izstrādātājam: ",
+        "Buy me a coffee": "Nopērc man kafiju"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Bonjour",
+        "Erro": "Erreur",
+        "O texo não é um codigo base64 valido": "Le texte n’est pas un code base64 valide",
+        "O valor de entrada não deve ser uma string vazia": "La valeur d’entrée ne doit pas être une chaîne vide",
+        "Mudar idioma": "Changer la langue",
+        "Base 64": "Base 64",
+        "Criptografar": "Chiffrer",
+        "Descriptografar": "Décrypter",
+        "Digite algo ou cole aqui o código": "Tapez quelque chose ou collez le code ici",
+        "Caracteres": "Caractères",
+        "Recortar": "Couper",
+        "Copiar": "Copier",
+        "Colar": "Pâte",
+        "Limpar": "Clair",
+        "Ajude o dev": "Aidez le dev : ",
+        "Buy me a coffee": "Achetez-moi un café"
+    }
+}

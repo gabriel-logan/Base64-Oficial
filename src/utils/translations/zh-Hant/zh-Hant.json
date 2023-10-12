@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "你好",
+        "Erro": "錯誤",
+        "O texo não é um codigo base64 valido": "文本不是有效的base64代碼",
+        "O valor de entrada não deve ser uma string vazia": "輸入值不應為空字串",
+        "Mudar idioma": "更改語言",
+        "Base 64": "基地 64",
+        "Criptografar": "加密",
+        "Descriptografar": "解密",
+        "Digite algo ou cole aqui o código": "在此處鍵入內容或粘貼代碼",
+        "Caracteres": "字元",
+        "Recortar": "切",
+        "Copiar": "複製",
+        "Colar": "糊",
+        "Limpar": "清楚",
+        "Ajude o dev": "幫助開發人員：",
+        "Buy me a coffee": "請我喝杯咖啡"
+    }
+}

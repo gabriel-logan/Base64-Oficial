@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Zdravo",
+        "Erro": "Greška",
+        "O texo não é um codigo base64 valido": "Tekst nije važeći base64 kôd",
+        "O valor de entrada não deve ser uma string vazia": "Ulazna vrednost ne bi trebalo da bude prazna niska",
+        "Mudar idioma": "Promeni jezik",
+        "Base 64": "Baza 64",
+        "Criptografar": "Šifrovanje",
+        "Descriptografar": "Dešifrovanje",
+        "Digite algo ou cole aqui o código": "Otkucajte nešto ili nalepite kod ovde",
+        "Caracteres": "Znakova",
+        "Recortar": "Iseci",
+        "Copiar": "Kopiranja",
+        "Colar": "Nalepite",
+        "Limpar": "Opozovite izbor",
+        "Ajude o dev": "Pomozi dev: ",
+        "Buy me a coffee": "Časti me kafom"
+    }
+}

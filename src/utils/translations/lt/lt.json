@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Labas",
+        "Erro": "Klaida",
+        "O texo não é um codigo base64 valido": "Tekstas nėra galiojantis base64 kodas",
+        "O valor de entrada não deve ser uma string vazia": "Įvesties reikšmė neturėtų būti tuščia eilutė",
+        "Mudar idioma": "Keisti kalbą",
+        "Base 64": "Bazė 64",
+        "Criptografar": "Šifruoti",
+        "Descriptografar": "Iššifruoti",
+        "Digite algo ou cole aqui o código": "Įveskite ką nors arba įklijuokite kodą čia",
+        "Caracteres": "Simbolių",
+        "Recortar": "Kirpti",
+        "Copiar": "Kopija",
+        "Colar": "Įklijuoti",
+        "Limpar": "Aiškus",
+        "Ajude o dev": "Padėkite kūrėjui: ",
+        "Buy me a coffee": "Nupirk man kavos"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Merhaba",
+        "Erro": "Hata",
+        "O texo não é um codigo base64 valido": "Metin geçerli bir base64 kodu değil",
+        "O valor de entrada não deve ser uma string vazia": "Giriş değeri boş bir dize olmamalıdır",
+        "Mudar idioma": "Dili Değiştir",
+        "Base 64": "Taban 64",
+        "Criptografar": "Şifrelemek",
+        "Descriptografar": "Şifre -sini çöz",
+        "Digite algo ou cole aqui o código": "Bir şey yazın veya kodu buraya yapıştırın",
+        "Caracteres": "Karakter",
+        "Recortar": "Kesmek",
+        "Copiar": "Kopya etmek",
+        "Colar": "Yapıştırmak",
+        "Limpar": "Berrak",
+        "Ajude o dev": "Geliştiriciye yardımcı olun: ",
+        "Buy me a coffee": "Bana bir kahve ısmarla"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Γεια σας",
+        "Erro": "Λάθος",
+        "O texo não é um codigo base64 valido": "Το κείμενο δεν είναι έγκυρος κωδικός base64",
+        "O valor de entrada não deve ser uma string vazia": "Η τιμή εισόδου δεν πρέπει να είναι κενή συμβολοσειρά",
+        "Mudar idioma": "Αλλαγή γλώσσας",
+        "Base 64": "Βάση 64",
+        "Criptografar": "Κρυπτογραφώ",
+        "Descriptografar": "Αποκρυπτογραφώ",
+        "Digite algo ou cole aqui o código": "Πληκτρολογήστε κάτι ή επικολλήστε τον κώδικα εδώ",
+        "Caracteres": "Χαρακτήρες",
+        "Recortar": "Κόβω",
+        "Copiar": "Αντίγραφο",
+        "Colar": "Πάστα",
+        "Limpar": "Σαφής",
+        "Ajude o dev": "Βοηθήστε τον προγραμματιστή: ",
+        "Buy me a coffee": "Αγόρασέ μου έναν καφέ"
+    }
+}

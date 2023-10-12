@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "ہیلو",
+        "Erro": "غلطی",
+        "O texo não é um codigo base64 valido": "متن درست بیس 64 کوڈ نہیں ہے",
+        "O valor de entrada não deve ser uma string vazia": "ان پٹ ویلیو ایک خالی تار نہیں ہونا چاہئے",
+        "Mudar idioma": "زبان تبدیل کریں",
+        "Base 64": "Base 64",
+        "Criptografar": "خفیہ کاری",
+        "Descriptografar": "Decrypt",
+        "Digite algo ou cole aqui o código": "کچھ ٹائپ کریں یا کوڈ یہاں چسپاں کریں",
+        "Caracteres": "کریکٹر",
+        "Recortar": "کاٹنا",
+        "Copiar": "نقل",
+        "Colar": "جوڑیں",
+        "Limpar": "صاف",
+        "Ajude o dev": "دیو کی مدد کریں: ",
+        "Buy me a coffee": "مجھے ایک کافی خریدیں"
+    }
+}

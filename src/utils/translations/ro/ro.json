@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Bună ziua",
+        "Erro": "Eroare",
+        "O texo não é um codigo base64 valido": "Textul nu este un cod base64 valid",
+        "O valor de entrada não deve ser uma string vazia": "Valoarea de intrare nu trebuie să fie un șir gol",
+        "Mudar idioma": "Schimbă limba",
+        "Base 64": "Baza 64",
+        "Criptografar": "Cripta",
+        "Descriptografar": "Decripta",
+        "Digite algo ou cole aqui o código": "Tastați ceva sau lipiți codul aici",
+        "Caracteres": "Caractere",
+        "Recortar": "Tăia",
+        "Copiar": "Copie",
+        "Colar": "Pastă",
+        "Limpar": "Clar",
+        "Ajude o dev": "Ajutați dezvoltatorul: ",
+        "Buy me a coffee": "Cumpără-mi o cafea"
+    }
+}

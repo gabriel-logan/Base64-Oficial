@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Halló",
+        "Erro": "Villa",
+        "O texo não é um codigo base64 valido": "Textinn er ekki gildur base64 kóði",
+        "O valor de entrada não deve ser uma string vazia": "Ílagsgildi ætti ekki að vera auður strengur",
+        "Mudar idioma": "Breyta tungumáli",
+        "Base 64": "Stöð 64",
+        "Criptografar": "Dulrita",
+        "Descriptografar": "Hallmæla",
+        "Digite algo ou cole aqui o código": "Sláðu inn eitthvað eða límdu kóðann hér",
+        "Caracteres": "Stafir",
+        "Recortar": "Skera",
+        "Copiar": "Afrit",
+        "Colar": "Klístur",
+        "Limpar": "Skýr",
+        "Ajude o dev": "Hjálpaðu dev: ",
+        "Buy me a coffee": "Bjóddu mér upp á kaffi"
+    }
+}

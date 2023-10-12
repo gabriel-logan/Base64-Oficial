@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Helo",
+        "Erro": "Ralat",
+        "O texo não é um codigo base64 valido": "Teks bukan kod base64 yang sah",
+        "O valor de entrada não deve ser uma string vazia": "Nilai input tidak boleh menjadi rentetan kosong",
+        "Mudar idioma": "Tukar bahasa",
+        "Base 64": "Asas 64",
+        "Criptografar": "Menyulitkan",
+        "Descriptografar": "Nyahsulit",
+        "Digite algo ou cole aqui o código": "Taipkan sesuatu atau tampal kod di sini",
+        "Caracteres": "Aksara",
+        "Recortar": "Memotong",
+        "Copiar": "Menyalin",
+        "Colar": "Tampal",
+        "Limpar": "Jelas",
+        "Ajude o dev": "Bantu dev: ",
+        "Buy me a coffee": "Beli saya kopi"
+    }
+}

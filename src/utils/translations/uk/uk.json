@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "Привіт",
+        "Erro": "Помилка",
+        "O texo não é um codigo base64 valido": "Текст не є дійсним кодом base64",
+        "O valor de entrada não deve ser uma string vazia": "Вхідне значення не повинно бути порожнім рядком",
+        "Mudar idioma": "Змінити мову",
+        "Base 64": "База 64",
+        "Criptografar": "Шифрувати",
+        "Descriptografar": "Дешифрувати",
+        "Digite algo ou cole aqui o código": "Введіть щось або вставте код сюди",
+        "Caracteres": "Символів",
+        "Recortar": "Різати",
+        "Copiar": "Копіювати",
+        "Colar": "Па́ста",
+        "Limpar": "Ясний",
+        "Ajude o dev": "Допоможіть розробнику: ",
+        "Buy me a coffee": "Купи мені каву"
+    }
+}

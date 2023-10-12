@@ -1,0 +1,20 @@
+{
+    "translation": {
+        "Hello": "สวัสดี",
+        "Erro": "ความผิดพลาด",
+        "O texo não é um codigo base64 valido": "ข้อความไม่ใช่รหัส base64 ที่ถูกต้อง",
+        "O valor de entrada não deve ser uma string vazia": "ค่าอินพุตไม่ควรเป็นสตริงว่าง",
+        "Mudar idioma": "เปลี่ยนภาษา",
+        "Base 64": "ฐานที่ 64",
+        "Criptografar": "เข้า รหัส ลับ",
+        "Descriptografar": "ถอดรหัส",
+        "Digite algo ou cole aqui o código": "พิมพ์บางอย่างหรือวางรหัสที่นี่",
+        "Caracteres": "อักขระ",
+        "Recortar": "ตัด",
+        "Copiar": "ลอก",
+        "Colar": "แปะ",
+        "Limpar": "ใส",
+        "Ajude o dev": "ช่วยผู้พัฒนา: ",
+        "Buy me a coffee": "ซื้อกาแฟให้ฉัน"
+    }
+}
