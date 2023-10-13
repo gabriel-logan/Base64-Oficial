@@ -23,7 +23,8 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.gabriellogan.Base64Oficial"
+      "package": "com.gabriellogan.Base64Oficial",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
