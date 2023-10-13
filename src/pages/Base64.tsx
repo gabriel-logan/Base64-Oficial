@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from './styles';
+
 import ChangeLangModal from './ChangeLandModal';
 
 export default function Base64() {
@@ -103,17 +104,17 @@ export default function Base64() {
 		<View style={styles.container}>
 			<View style={styles.languageContainer}>
 				<TouchableOpacity style={styles.languageButton} onPress={() => setModalChangeLang(true)}>
-					<Text>{t('Mudar idioma')}</Text>
+					<Text style={styles.languageButtonText}>{t('Mudar idioma')}</Text>
 				</TouchableOpacity>
 			</View>
 			<ChangeLangModal modalChangeLang={modalChangeLang} setModalChangeLang={setModalChangeLang} />
 			<Text style={styles.title}>{t('Base 64')}</Text>
 			<View style={styles.buttonContainer}>
 				<TouchableOpacity style={styles.button} onPress={encodeToBase64}>
-					<Text>{t('Criptografar')}</Text>
+					<Text style={styles.buttonContainerText}>{t('Criptografar')}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.button} onPress={decodeFromBase64}>
-					<Text>{t('Descriptografar')}</Text>
+					<Text style={styles.buttonContainerText}>{t('Descriptografar')}</Text>
 				</TouchableOpacity>
 			</View>
 			<View style={styles.inputContainer}>
@@ -127,23 +128,23 @@ export default function Base64() {
 				/>
 			</View>
 			<View style={styles.charCountContainer}>
-				<Text>
+				<Text style={{ color: inputText.length > 25000 ? 'red' : 'black' }}>
 					{inputText.length}
 					<Text style={styles.charCountText}> {t('Caracteres')}</Text>
 				</Text>
 			</View>
 			<View style={styles.actionContainer}>
 				<TouchableOpacity style={styles.actionButton} onPress={cutToClipboard}>
-					<Text>{t('Recortar')}</Text>
+					<Text style={styles.actionButtonText}>{t('Recortar')}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.actionButton} onPress={copyToClipboard}>
-					<Text>{t('Copiar')}</Text>
+					<Text style={styles.actionButtonText}>{t('Copiar')}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.actionButton} onPress={pasteToClipboard}>
-					<Text>{t('Colar')}</Text>
+					<Text style={styles.actionButtonText}>{t('Colar')}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.actionButton} onPress={cleanToClipboard}>
-					<Text>{t('Limpar')}</Text>
+					<Text style={styles.actionButtonText}>{t('Limpar')}</Text>
 				</TouchableOpacity>
 			</View>
 			<View style={styles.divCheckBox}>
