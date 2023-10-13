@@ -15,6 +15,9 @@
         "Colar": "جای گذاری",
         "Limpar": "روشن",
         "Ajude o dev": "به Dev کمک کنید: ",
-        "Buy me a coffee": "یه قهوه برام بخر"
+        "Buy me a coffee": "یه قهوه برام بخر",
+        "Apagar apos gerar ?": "حذف پس از تولید؟",
+        "Considerar espaço ?": "فضاها را در نظر بگیرید؟",
+        "It's too big": "خیلی بزرگه"
     }
 }

@@ -1,91 +1,97 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 
 import { isBase64 } from 'multiform-validator';
+
 import base64 from 'react-native-base64';
 
 import * as Clipboard from 'expo-clipboard';
+
+import * as Linking from 'expo-linking';
+
 import Checkbox from 'expo-checkbox';
 
 import { useTranslation } from 'react-i18next';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import styles from './styles';
+import ChangeLangModal from './ChangeLandModal';
+
 export default function Base64() {
 	const { t } = useTranslation();
 
-	const [charCount, setCharCount] = useState(0);
-
 	const [inputText, setInputText] = useState('');
-	const [base64Text, setBase64Text] = useState('');
-	const [cleanAlways, setCleanAlways] = useState(false);
+
 	const [considerSpace, setConsiderSpace] = useState(false);
 
+	const [modalChangeLang, setModalChangeLang] = useState(false);
+
 	const encodeToBase64 = () => {
-		let encoded: string;
-		if (considerSpace) {
-			encoded = base64.encode(`${inputText}\n`);
+		if (minimunValidation()) {
+			let encoded: string;
+			if (considerSpace) {
+				encoded = base64.encode(`${inputText}\n`);
+			} else {
+				encoded = base64.encode(inputText);
+			}
+
+			setInputText(encoded);
 		} else {
-			encoded = base64.encode(inputText);
-		}
-		setBase64Text(encoded);
-		if (cleanAlways) {
-			setInputText('');
+			Alert.alert(t('Erro'), t("It's too big"));
 		}
 	};
 
+	function minimunValidation() {
+		if (inputText.length > 25000) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	const decodeFromBase64 = () => {
-		const base64TextTrim = base64Text.trim();
-		if (base64TextTrim.length > 0) {
-			// Check if the trimmed string is not empty
-			if (isBase64(base64TextTrim)) {
-				const decoded = base64.decode(base64TextTrim);
-				setInputText(decoded);
-				if (cleanAlways) {
-					setBase64Text('');
+		if (minimunValidation()) {
+			const base64TextTrim = inputText.trim();
+			if (base64TextTrim.length > 0) {
+				// Check if the trimmed string is not empty
+				if (isBase64(base64TextTrim)) {
+					const decoded = base64.decode(base64TextTrim);
+					setInputText(decoded);
+				} else {
+					Alert.alert(t('Erro'), t('O texo não é um codigo base64 valido'));
 				}
 			} else {
-				Alert.alert(t('Erro'), t('O texo não é um codigo base64 valido'));
+				Alert.alert(t('Erro'), t('O valor de entrada não deve ser uma string vazia'));
 			}
 		} else {
-			Alert.alert(t('Erro'), t('O valor de entrada não deve ser uma string vazia'));
+			Alert.alert(t('Erro'), t("It's too big"));
 		}
 	};
 
 	const copyToClipboard = async () => {
-		if (textToCopy) {
-			await Clipboard.setStringAsync(textToCopy);
+		if (inputText) {
+			await Clipboard.setStringAsync(inputText);
 		}
 	};
 
 	const cutToClipboard = async () => {
-		if (textToCopy) {
-			await Clipboard.setStringAsync(textToCopy);
-			cleanToClipboard(whichOne);
+		if (inputText) {
+			await Clipboard.setStringAsync(inputText);
+			cleanToClipboard();
 		}
 	};
 
 	const pasteToClipboard = async () => {
 		const text = await Clipboard.getStringAsync();
-		if (whichOne === 'text') {
-			setInputText(text);
-		} else {
-			setBase64Text(text);
-		}
+		setInputText((prevText) => prevText + text);
 	};
 
-	const cleanToClipboard = () => {
-		if (whichOne === 'text') {
-			setInputText('');
-		} else {
-			setBase64Text('');
-		}
-	};
+	const cleanToClipboard = () => setInputText('');
 
 	useEffect(() => {
 		(async () => {
-			const base64AlwaysClean = await AsyncStorage.getItem('base64AlwaysCleanAfterGenerate');
-			if (base64AlwaysClean) {
-				setCleanAlways(JSON.parse(base64AlwaysClean));
-			}
 			const considerSpace = await AsyncStorage.getItem('considerSpaceAfterGenerate');
 			if (considerSpace) {
 				setConsiderSpace(JSON.parse(considerSpace));
@@ -96,109 +102,75 @@ export default function Base64() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.languageContainer}>
-				<TouchableOpacity style={styles.languageButton}>
+				<TouchableOpacity style={styles.languageButton} onPress={() => setModalChangeLang(true)}>
 					<Text>{t('Mudar idioma')}</Text>
 				</TouchableOpacity>
 			</View>
+			<ChangeLangModal modalChangeLang={modalChangeLang} setModalChangeLang={setModalChangeLang} />
 			<Text style={styles.title}>{t('Base 64')}</Text>
 			<View style={styles.buttonContainer}>
-				<TouchableOpacity style={styles.button}>
+				<TouchableOpacity style={styles.button} onPress={encodeToBase64}>
 					<Text>{t('Criptografar')}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.button}>
+				<TouchableOpacity style={styles.button} onPress={decodeFromBase64}>
 					<Text>{t('Descriptografar')}</Text>
 				</TouchableOpacity>
 			</View>
 			<View style={styles.inputContainer}>
-				<TextInput style={styles.input} placeholder={t('Digite algo ou cole aqui o código')} />
+				<TextInput
+					multiline
+					style={styles.input}
+					placeholder={t('Digite algo ou cole aqui o código')}
+					value={inputText}
+					onChangeText={(text) => setInputText(text)}
+					maxLength={25000}
+				/>
 			</View>
 			<View style={styles.charCountContainer}>
 				<Text>
-					{charCount}
+					{inputText.length}
 					<Text style={styles.charCountText}> {t('Caracteres')}</Text>
 				</Text>
 			</View>
 			<View style={styles.actionContainer}>
-				<TouchableOpacity style={styles.actionButton}>
+				<TouchableOpacity style={styles.actionButton} onPress={cutToClipboard}>
 					<Text>{t('Recortar')}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton}>
+				<TouchableOpacity style={styles.actionButton} onPress={copyToClipboard}>
 					<Text>{t('Copiar')}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton}>
+				<TouchableOpacity style={styles.actionButton} onPress={pasteToClipboard}>
 					<Text>{t('Colar')}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton}>
+				<TouchableOpacity style={styles.actionButton} onPress={cleanToClipboard}>
 					<Text>{t('Limpar')}</Text>
 				</TouchableOpacity>
 			</View>
-			<View>
-				<Text>{t('Ajude o dev')}</Text>
-				<TouchableOpacity>
-					<Text>{t('Buy me a coffee')}</Text>
-				</TouchableOpacity>
+			<View style={styles.divCheckBox}>
+				<View style={styles.row}>
+					<Text style={styles.text}>{t('Considerar espaço ?')}</Text>
+					<Checkbox
+						value={considerSpace}
+						onValueChange={async (value) => {
+							await AsyncStorage.setItem('considerSpaceAfterGenerate', JSON.stringify(value));
+							setConsiderSpace(value);
+						}}
+					/>
+				</View>
+			</View>
+			<View style={styles.footer}>
+				<View style={styles.helpContainer}>
+					<Text style={styles.helpText}>{t('Ajude o dev')}</Text>
+					<TouchableOpacity
+						style={styles.coffeeButton}
+						onPress={() => {
+							Linking.openURL('https://www.buymeacoffee.com/gabriellogan');
+						}}
+					>
+						<Text style={styles.coffeeButtonText}>{t('Buy me a coffee')}</Text>
+					</TouchableOpacity>
+				</View>
 			</View>
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		padding: 20,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	title: {
-		fontSize: 24,
-		fontWeight: 'bold',
-		marginBottom: 20,
-	},
-	buttonContainer: {
-		flexDirection: 'row',
-		marginBottom: 20,
-	},
-	button: {
-		flex: 1,
-		alignItems: 'center',
-		padding: 10,
-		margin: 5,
-		backgroundColor: '#3498db',
-	},
-	inputContainer: {
-		width: '100%',
-		marginBottom: 10,
-	},
-	input: {
-		borderWidth: 1,
-		borderColor: '#ccc',
-		borderRadius: 5,
-		padding: 10,
-	},
-	charCountContainer: {
-		marginBottom: 10,
-	},
-	charCountText: {
-		color: 'gray',
-	},
-	actionContainer: {
-		flexDirection: 'row',
-		marginBottom: 20,
-	},
-	actionButton: {
-		flex: 1,
-		alignItems: 'center',
-		padding: 10,
-		margin: 5,
-		backgroundColor: '#27ae60',
-	},
-	languageContainer: {
-		position: 'absolute',
-		top: 50,
-		right: 35,
-	},
-	languageButton: {
-		backgroundColor: '#e74c3c',
-		padding: 10,
-	},
-});

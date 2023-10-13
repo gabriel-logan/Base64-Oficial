@@ -15,6 +15,9 @@
         "Colar": "붙여넣기",
         "Limpar": "맑다",
         "Ajude o dev": "개발자를 도와주세요. ",
-        "Buy me a coffee": "커피 한 잔 사줘"
+        "Buy me a coffee": "커피 한 잔 사줘",
+        "Apagar apos gerar ?": "생성 후 삭제하시겠습니까?",
+        "Considerar espaço ?": "공간을 고려하십니까?",
+        "It's too big": "너무 큽니다"
     }
 }

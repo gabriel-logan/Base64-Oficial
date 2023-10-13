@@ -15,6 +15,9 @@
         "Colar": "Pastă",
         "Limpar": "Clar",
         "Ajude o dev": "Ajutați dezvoltatorul: ",
-        "Buy me a coffee": "Cumpără-mi o cafea"
+        "Buy me a coffee": "Cumpără-mi o cafea",
+        "Apagar apos gerar ?": "Ștergeți după generare?",
+        "Considerar espaço ?": "Luați în considerare spațiile?",
+        "It's too big": "E prea mare"
     }
 }

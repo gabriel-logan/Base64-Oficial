@@ -15,6 +15,9 @@
         "Colar": "糊",
         "Limpar": "清楚",
         "Ajude o dev": "幫助開發人員：",
-        "Buy me a coffee": "請我喝杯咖啡"
+        "Buy me a coffee": "請我喝杯咖啡",
+        "Apagar apos gerar ?": "生成後刪除？",
+        "Considerar espaço ?": "考慮空間？",
+        "It's too big": "太大了"
     }
 }

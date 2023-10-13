@@ -15,6 +15,10 @@
 		"Colar":"Colar",
 		"Limpar":"Limpar",
 		"Ajude o dev": "Ajude o dev: ",
-		"Buy me a coffee": "Buy me a coffee"
+		"Buy me a coffee": "Buy me a coffee",
+
+		"Apagar apos gerar ?": "Apagar apos gerar ?",
+		"Considerar espaço ?":"Considerar espaço ?"
+
 	}
 }

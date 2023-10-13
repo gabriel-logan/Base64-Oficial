@@ -15,6 +15,9 @@
         "Colar": "Pâte",
         "Limpar": "Clair",
         "Ajude o dev": "Aidez le dev : ",
-        "Buy me a coffee": "Achetez-moi un café"
+        "Buy me a coffee": "Achetez-moi un café",
+        "Apagar apos gerar ?": "Supprimer après la génération ?",
+        "Considerar espaço ?": "Envisager des espaces?",
+        "It's too big": "C’est trop gros"
     }
 }

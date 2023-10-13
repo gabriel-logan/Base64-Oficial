@@ -15,6 +15,9 @@
         "Colar": "Tahna",
         "Limpar": "Selvä",
         "Ajude o dev": "Auta kehittäjää: ",
-        "Buy me a coffee": "Osta minulle kahvia"
+        "Buy me a coffee": "Osta minulle kahvia",
+        "Apagar apos gerar ?": "Poista luomisen jälkeen?",
+        "Considerar espaço ?": "Harkitse tiloja?",
+        "It's too big": "Se on liian iso"
     }
 }

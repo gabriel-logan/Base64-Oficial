@@ -15,6 +15,9 @@
         "Colar": "Lime inn",
         "Limpar": "Klar",
         "Ajude o dev": "Hjelp utvikleren: ",
-        "Buy me a coffee": "Kjøp meg en kaffe"
+        "Buy me a coffee": "Kjøp meg en kaffe",
+        "Apagar apos gerar ?": "Slette etter generering?",
+        "Considerar espaço ?": "Vurdere mellomrom?",
+        "It's too big": "Det er for stort"
     }
 }

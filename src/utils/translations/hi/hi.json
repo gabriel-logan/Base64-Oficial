@@ -15,6 +15,9 @@
         "Colar": "लेई",
         "Limpar": "स्पष्ट",
         "Ajude o dev": "देव की मदद करें: ",
-        "Buy me a coffee": "मेरे लिए एक कॉफी खरीदें"
+        "Buy me a coffee": "मेरे लिए एक कॉफी खरीदें",
+        "Apagar apos gerar ?": "जनरेट करने के बाद हटाएँ?",
+        "Considerar espaço ?": "रिक्त स्थान पर विचार करें?",
+        "It's too big": "यह बहुत बड़ा है"
     }
 }

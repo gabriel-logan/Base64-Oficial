@@ -15,6 +15,9 @@
         "Colar": "糊",
         "Limpar": "清楚",
         "Ajude o dev": "帮助开发人员：",
-        "Buy me a coffee": "请我喝杯咖啡"
+        "Buy me a coffee": "请我喝杯咖啡",
+        "Apagar apos gerar ?": "生成后删除？",
+        "Considerar espaço ?": "考虑空间？",
+        "It's too big": "太大了"
     }
 }

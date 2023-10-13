@@ -15,6 +15,9 @@
         "Colar": "Įklijuoti",
         "Limpar": "Aiškus",
         "Ajude o dev": "Padėkite kūrėjui: ",
-        "Buy me a coffee": "Nupirk man kavos"
+        "Buy me a coffee": "Nupirk man kavos",
+        "Apagar apos gerar ?": "Ištrinti sugeneravus?",
+        "Considerar espaço ?": "Svarstote apie erdves?",
+        "It's too big": "Jis per didelis"
     }
 }

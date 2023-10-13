@@ -15,6 +15,9 @@
         "Colar": "Indsætte",
         "Limpar": "Tydelig",
         "Ajude o dev": "Hjælp udvikleren: ",
-        "Buy me a coffee": "Køb mig en kop kaffe"
+        "Buy me a coffee": "Køb mig en kop kaffe",
+        "Apagar apos gerar ?": "Slet efter generering?",
+        "Considerar espaço ?": "Overvej mellemrum?",
+        "It's too big": "Det er for stort"
     }
 }

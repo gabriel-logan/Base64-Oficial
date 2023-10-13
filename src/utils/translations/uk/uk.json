@@ -15,6 +15,9 @@
         "Colar": "Па́ста",
         "Limpar": "Ясний",
         "Ajude o dev": "Допоможіть розробнику: ",
-        "Buy me a coffee": "Купи мені каву"
+        "Buy me a coffee": "Купи мені каву",
+        "Apagar apos gerar ?": "Видалити після генерації?",
+        "Considerar espaço ?": "Розглянемо простори?",
+        "It's too big": "Він занадто великий"
     }
 }

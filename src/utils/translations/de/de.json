@@ -15,6 +15,9 @@
         "Colar": "Kleister",
         "Limpar": "Klar",
         "Ajude o dev": "Helfen Sie dem Entwickler: ",
-        "Buy me a coffee": "Kauf mir einen Kaffee"
+        "Buy me a coffee": "Kauf mir einen Kaffee",
+        "Apagar apos gerar ?": "Nach dem Generieren löschen?",
+        "Considerar espaço ?": "Betrachten Sie Räume?",
+        "It's too big": "Es ist zu groß"
     }
 }

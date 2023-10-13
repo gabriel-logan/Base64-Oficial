@@ -15,6 +15,9 @@
         "Colar": "Pasta",
         "Limpar": "Jasan",
         "Ajude o dev": "Pomozite dev: ",
-        "Buy me a coffee": "Kupi mi kavu"
+        "Buy me a coffee": "Kupi mi kavu",
+        "Apagar apos gerar ?": "Želite li izbrisati nakon generiranja?",
+        "Considerar espaço ?": "Razmislite o razmacima?",
+        "It's too big": "Prevelika je."
     }
 }

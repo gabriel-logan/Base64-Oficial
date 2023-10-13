@@ -15,6 +15,9 @@
         "Colar": "Pasta",
         "Limpar": "Jelas",
         "Ajude o dev": "Bantu pengembang: ",
-        "Buy me a coffee": "Belikan aku kopi"
+        "Buy me a coffee": "Belikan aku kopi",
+        "Apagar apos gerar ?": "Hapus setelah menghasilkan?",
+        "Considerar espaço ?": "Pertimbangkan ruang?",
+        "It's too big": "Itu terlalu besar"
     }
 }

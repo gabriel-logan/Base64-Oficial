@@ -15,6 +15,9 @@
         "Colar": "Паста",
         "Limpar": "Ясный",
         "Ajude o dev": "Помогите разработчику: ",
-        "Buy me a coffee": "Купи мне кофе"
+        "Buy me a coffee": "Купи мне кофе",
+        "Apagar apos gerar ?": "Удалить после генерации?",
+        "Considerar espaço ?": "Подумайте о пространствах?",
+        "It's too big": "Он слишком большой"
     }
 }

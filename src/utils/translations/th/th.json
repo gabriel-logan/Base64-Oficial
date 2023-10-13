@@ -15,6 +15,9 @@
         "Colar": "แปะ",
         "Limpar": "ใส",
         "Ajude o dev": "ช่วยผู้พัฒนา: ",
-        "Buy me a coffee": "ซื้อกาแฟให้ฉัน"
+        "Buy me a coffee": "ซื้อกาแฟให้ฉัน",
+        "Apagar apos gerar ?": "ลบหลังจากสร้าง?",
+        "Considerar espaço ?": "พิจารณาช่องว่าง?",
+        "It's too big": "มันใหญ่เกินไป"
     }
 }

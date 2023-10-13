@@ -15,6 +15,11 @@
 		"Colar": "Paste",
 		"Limpar": "Clear",
 		"Ajude o dev": "Help the dev: ",
-		"Buy me a coffee": "Buy me a coffee"
+		"Buy me a coffee": "Buy me a coffee",
+
+		"Apagar apos gerar ?": "Delete after generating?",
+		"Considerar espaço ?": "Consider spaces?",
+
+		"It's too big":"It's too big"
 		}
 	}

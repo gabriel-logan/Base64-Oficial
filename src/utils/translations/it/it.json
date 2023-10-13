@@ -15,6 +15,9 @@
         "Colar": "Incollare",
         "Limpar": "Chiaro",
         "Ajude o dev": "Aiuta gli sviluppatori a: ",
-        "Buy me a coffee": "Comprami un caffè"
+        "Buy me a coffee": "Comprami un caffè",
+        "Apagar apos gerar ?": "Eliminare dopo la generazione?",
+        "Considerar espaço ?": "Considerare gli spazi?",
+        "It's too big": "È troppo grande"
     }
 }

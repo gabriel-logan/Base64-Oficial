@@ -15,6 +15,9 @@
         "Colar": "Dán",
         "Limpar": "Trong",
         "Ajude o dev": "Giúp nhà phát triển: ",
-        "Buy me a coffee": "Mua cho tôi một ly cà phê"
+        "Buy me a coffee": "Mua cho tôi một ly cà phê",
+        "Apagar apos gerar ?": "Xóa sau khi tạo?",
+        "Considerar espaço ?": "Xem xét không gian?",
+        "It's too big": "Nó quá lớn"
     }
 }

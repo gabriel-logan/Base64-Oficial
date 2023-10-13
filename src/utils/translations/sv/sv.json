@@ -15,6 +15,9 @@
         "Colar": "Klistra",
         "Limpar": "Klar",
         "Ajude o dev": "Hjälp utvecklaren: ",
-        "Buy me a coffee": "Köp mig en kaffe"
+        "Buy me a coffee": "Köp mig en kaffe",
+        "Apagar apos gerar ?": "Ta bort efter generering?",
+        "Considerar espaço ?": "Tänk på mellanslag?",
+        "It's too big": "Det är för stort"
     }
 }

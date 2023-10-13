@@ -15,6 +15,9 @@
         "Colar": "Тесто",
         "Limpar": "Ясен",
         "Ajude o dev": "Помогнете на разработчиците: ",
-        "Buy me a coffee": "Купи ми кафе"
+        "Buy me a coffee": "Купи ми кафе",
+        "Apagar apos gerar ?": "Изтриване след генериране?",
+        "Considerar espaço ?": "Помислете за пространства?",
+        "It's too big": "Твърде голямо е"
     }
 }

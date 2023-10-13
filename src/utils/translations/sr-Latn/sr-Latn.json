@@ -15,6 +15,9 @@
         "Colar": "Nalepite",
         "Limpar": "Opozovite izbor",
         "Ajude o dev": "Pomozi dev: ",
-        "Buy me a coffee": "Časti me kafom"
+        "Buy me a coffee": "Časti me kafom",
+        "Apagar apos gerar ?": "Želite li da izbrišete nakon generisanja?",
+        "Considerar espaço ?": "Da razmotrim razmake?",
+        "It's too big": "Prevelik je"
     }
 }

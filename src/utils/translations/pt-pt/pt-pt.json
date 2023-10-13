@@ -15,6 +15,9 @@
         "Colar": "Colar",
         "Limpar": "Limpar",
         "Ajude o dev": "Ajude o desenvolvedor: ",
-        "Buy me a coffee": "Compre-me um café"
+        "Buy me a coffee": "Compre-me um café",
+        "Apagar apos gerar ?": "Excluir depois de gerar?",
+        "Considerar espaço ?": "Considera espaços?",
+        "It's too big": "É muito grande"
     }
 }

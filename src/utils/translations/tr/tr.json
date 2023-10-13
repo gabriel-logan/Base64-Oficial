@@ -15,6 +15,9 @@
         "Colar": "Yapıştırmak",
         "Limpar": "Berrak",
         "Ajude o dev": "Geliştiriciye yardımcı olun: ",
-        "Buy me a coffee": "Bana bir kahve ısmarla"
+        "Buy me a coffee": "Bana bir kahve ısmarla",
+        "Apagar apos gerar ?": "Oluşturduktan sonra silinsin mi?",
+        "Considerar espaço ?": "Boşlukları düşünün?",
+        "It's too big": "Bu çok büyük"
     }
 }

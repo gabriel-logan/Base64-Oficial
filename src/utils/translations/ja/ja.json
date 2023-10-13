@@ -15,6 +15,9 @@
         "Colar": "糊",
         "Limpar": "クリア",
         "Ajude o dev": "開発者を助ける:",
-        "Buy me a coffee": "コーヒーを買って"
+        "Buy me a coffee": "コーヒーを買って",
+        "Apagar apos gerar ?": "生成後に削除しますか?",
+        "Considerar espaço ?": "スペースを検討しますか?",
+        "It's too big": "大きすぎる"
     }
 }

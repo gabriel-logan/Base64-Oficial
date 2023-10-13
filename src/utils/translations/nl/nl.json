@@ -15,6 +15,9 @@
         "Colar": "Plakken",
         "Limpar": "Duidelijk",
         "Ajude o dev": "Help de ontwikkelaar: ",
-        "Buy me a coffee": "Koop een koffie voor mij"
+        "Buy me a coffee": "Koop een koffie voor mij",
+        "Apagar apos gerar ?": "Verwijderen na genereren?",
+        "Considerar espaço ?": "Ruimtes overwegen?",
+        "It's too big": "Het is te groot"
     }
 }

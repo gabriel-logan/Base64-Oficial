@@ -15,6 +15,9 @@
         "Colar": "הדבק",
         "Limpar": "צלול",
         "Ajude o dev": "עזור למפתח: ",
-        "Buy me a coffee": "קנה לי קפה"
+        "Buy me a coffee": "קנה לי קפה",
+        "Apagar apos gerar ?": "למחוק לאחר היצירה?",
+        "Considerar espaço ?": "חושבים על חללים?",
+        "It's too big": "זה גדול מדי"
     }
 }

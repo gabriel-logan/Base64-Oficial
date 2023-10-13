@@ -15,6 +15,9 @@
         "Colar": "Prilepiť",
         "Limpar": "Jasný",
         "Ajude o dev": "Pomôžte vývojárovi: ",
-        "Buy me a coffee": "Kúpte mi kávu"
+        "Buy me a coffee": "Kúpte mi kávu",
+        "Apagar apos gerar ?": "Odstrániť po vygenerovaní?",
+        "Considerar espaço ?": "Zvážiť priestory?",
+        "It's too big": "Je príliš veľký"
     }
 }

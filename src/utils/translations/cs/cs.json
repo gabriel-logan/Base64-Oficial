@@ -15,6 +15,9 @@
         "Colar": "Pasta",
         "Limpar": "Jasný",
         "Ajude o dev": "Pomozte vývoji: ",
-        "Buy me a coffee": "Kupte mi kávu"
+        "Buy me a coffee": "Kupte mi kávu",
+        "Apagar apos gerar ?": "Smazat po vygenerování?",
+        "Considerar espaço ?": "Uvažujete o prostorech?",
+        "It's too big": "Je příliš velký"
     }
 }

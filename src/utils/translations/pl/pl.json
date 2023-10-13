@@ -15,6 +15,9 @@
         "Colar": "Wklejać",
         "Limpar": "Jasny",
         "Ajude o dev": "Pomóż deweloperowi: ",
-        "Buy me a coffee": "Kup mi kawę"
+        "Buy me a coffee": "Kup mi kawę",
+        "Apagar apos gerar ?": "Usunąć po wygenerowaniu?",
+        "Considerar espaço ?": "Rozważasz spacje?",
+        "It's too big": "Jest za duży"
     }
 }

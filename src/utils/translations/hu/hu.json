@@ -15,6 +15,9 @@
         "Colar": "Paszta",
         "Limpar": "Világos",
         "Ajude o dev": "Segítsen a fejlesztőnek: ",
-        "Buy me a coffee": "Vegyél nekem egy kávét"
+        "Buy me a coffee": "Vegyél nekem egy kávét",
+        "Apagar apos gerar ?": "Törlés generálás után?",
+        "Considerar espaço ?": "Fontolja meg a tereket?",
+        "It's too big": "Túl nagy"
     }
 }
