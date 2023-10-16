@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 	actionButton: {
 		alignItems: 'center',
 		padding: RFValue(10),
-		margin: 5,
+		margin: RFValue(5),
 		backgroundColor: '#27ae60',
 		width: RFValue(90),
 		borderRadius: 4,

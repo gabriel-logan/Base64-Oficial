@@ -3,6 +3,7 @@
     "name": "Base64-Oficial",
     "slug": "Base64-Oficial",
     "owner": "gabriellogan",
+		"githubUrl": "https://github.com/gabriel-logan/Base64-Oficial",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#02bcd4"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +20,13 @@
       "supportsTablet": true
     },
     "android": {
+			"playStoreUrl": "https://play.google.com/store/apps/details?id=com.gabriellogan.Base64Oficial",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#02bcd4"
       },
       "package": "com.gabriellogan.Base64Oficial",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"

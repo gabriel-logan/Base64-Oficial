@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import { RFValue } from '../Responsive';
+
 interface ChangeLangModalProps {
 	modalChangeLang: boolean;
 	setModalChangeLang: Dispatch<SetStateAction<boolean>>;
@@ -112,16 +114,16 @@ const styles = StyleSheet.create({
 		width: '80%', // Largura do conteúdo do ScrollView
 		backgroundColor: 'white', // Cor de fundo do ScrollView
 		borderRadius: 4,
-		maxHeight: 450,
-		padding: 20,
+		maxHeight: RFValue(450),
+		padding: RFValue(20),
 	},
 	languageButton: {
-		padding: 10,
+		padding: RFValue(10),
 		borderBottomWidth: 1,
 		borderBottomColor: '#ccc', // Cor da linha separadora		borderWidth: 1,
 	},
 	languageText: {
-		fontSize: 16,
+		fontSize: RFValue(16),
 		fontWeight: 'bold',
 	},
 });
