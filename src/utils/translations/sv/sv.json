@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hej",
-        "Erro": "Fel",
-        "O texo não é um codigo base64 valido": "Texten är inte en giltig base64-kod",
-        "O valor de entrada não deve ser uma string vazia": "Indatavärdet ska inte vara en tom sträng",
-        "Mudar idioma": "Byt språk",
-        "Base 64": "Bas 64",
-        "Criptografar": "Kryptera",
-        "Descriptografar": "Dekryptera",
-        "Digite algo ou cole aqui o código": "Skriv något eller klistra in koden här",
-        "Caracteres": "Tecken",
-        "Recortar": "Skära",
-        "Copiar": "Kopia",
-        "Colar": "Klistra",
-        "Limpar": "Klar",
-        "Ajude o dev": "Hjälp utvecklaren: ",
-        "Buy me a coffee": "Köp mig en kaffe",
-        "Apagar apos gerar ?": "Ta bort efter generering?",
-        "Considerar espaço ?": "Tänk på mellanslag?",
-        "It's too big": "Det är för stort"
-    }
+	"translation": {
+		"Hello": "Hej",
+		"Erro": "Fel",
+		"O texo não é um codigo base64 valido": "Texten är inte en giltig base64-kod",
+		"O valor de entrada não deve ser uma string vazia": "Indatavärdet ska inte vara en tom sträng",
+		"Mudar idioma": "Byt språk",
+		"Base 64": "Bas 64",
+		"Criptografar": "Kryptera",
+		"Descriptografar": "Dekryptera",
+		"Digite algo ou cole aqui o código": "Skriv något eller klistra in koden här",
+		"Caracteres": "Tecken",
+		"Recortar": "Skära",
+		"Copiar": "Kopia",
+		"Colar": "Klistra",
+		"Limpar": "Klar",
+		"Ajude o dev": "Hjälp utvecklaren: ",
+		"Buy me a coffee": "Köp mig en kaffe",
+		"Apagar apos gerar ?": "Ta bort efter generering?",
+		"Considerar espaço ?": "Tänk på mellanslag?",
+		"It's too big": "Det är för stort"
+	}
 }

@@ -1,15 +1,15 @@
 {
-  "cli": {
-    "version": ">= 5.4.0"
-  },
-  "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
-    "preview": {
-      "distribution": "internal"
-    },
+	"cli": {
+		"version": ">= 5.4.0"
+	},
+	"build": {
+		"development": {
+			"developmentClient": true,
+			"distribution": "internal"
+		},
+		"preview": {
+			"distribution": "internal"
+		},
 		"preview2": {
 			"android": {
 				"gradleCommand": ":app:assembleRelease"
@@ -21,8 +21,8 @@
 		"production": {
 			"autoIncrement": true
 		}
-  },
-  "submit": {
-    "production": {}
-  }
+	},
+	"submit": {
+		"production": {}
+	}
 }

@@ -1,6 +1,6 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Base64 from '../pages/Base64';
+import Base64 from "../pages/Base64";
 
 const Stack = createNativeStackNavigator();
 

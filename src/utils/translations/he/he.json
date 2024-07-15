@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "שלום",
-        "Erro": "שגיאה",
-        "O texo não é um codigo base64 valido": "הטקסט אינו קוד base64 חוקי",
-        "O valor de entrada não deve ser uma string vazia": "ערך קלט לא צריך להיות מחרוזת ריקה",
-        "Mudar idioma": "שנה שפה",
-        "Base 64": "בסיס 64",
-        "Criptografar": "להצפין",
-        "Descriptografar": "לפענח",
-        "Digite algo ou cole aqui o código": "הקלד משהו או הדבק את הקוד כאן",
-        "Caracteres": "תווים",
-        "Recortar": "חתך",
-        "Copiar": "עותק",
-        "Colar": "הדבק",
-        "Limpar": "צלול",
-        "Ajude o dev": "עזור למפתח: ",
-        "Buy me a coffee": "קנה לי קפה",
-        "Apagar apos gerar ?": "למחוק לאחר היצירה?",
-        "Considerar espaço ?": "חושבים על חללים?",
-        "It's too big": "זה גדול מדי"
-    }
+	"translation": {
+		"Hello": "שלום",
+		"Erro": "שגיאה",
+		"O texo não é um codigo base64 valido": "הטקסט אינו קוד base64 חוקי",
+		"O valor de entrada não deve ser uma string vazia": "ערך קלט לא צריך להיות מחרוזת ריקה",
+		"Mudar idioma": "שנה שפה",
+		"Base 64": "בסיס 64",
+		"Criptografar": "להצפין",
+		"Descriptografar": "לפענח",
+		"Digite algo ou cole aqui o código": "הקלד משהו או הדבק את הקוד כאן",
+		"Caracteres": "תווים",
+		"Recortar": "חתך",
+		"Copiar": "עותק",
+		"Colar": "הדבק",
+		"Limpar": "צלול",
+		"Ajude o dev": "עזור למפתח: ",
+		"Buy me a coffee": "קנה לי קפה",
+		"Apagar apos gerar ?": "למחוק לאחר היצירה?",
+		"Considerar espaço ?": "חושבים על חללים?",
+		"It's too big": "זה גדול מדי"
+	}
 }

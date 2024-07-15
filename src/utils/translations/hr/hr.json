@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Pozdrav",
-        "Erro": "Greška",
-        "O texo não é um codigo base64 valido": "Tekst nije valjani kod base64",
-        "O valor de entrada não deve ser uma string vazia": "Ulazna vrijednost ne smije biti prazan niz",
-        "Mudar idioma": "Promjena jezika",
-        "Base 64": "Baza 64",
-        "Criptografar": "Šifrirati",
-        "Descriptografar": "Dešifrirati",
-        "Digite algo ou cole aqui o código": "Ovdje upišite nešto ili zalijepite kôd",
-        "Caracteres": "Znakova",
-        "Recortar": "Rezati",
-        "Copiar": "Kopija",
-        "Colar": "Pasta",
-        "Limpar": "Jasan",
-        "Ajude o dev": "Pomozite dev: ",
-        "Buy me a coffee": "Kupi mi kavu",
-        "Apagar apos gerar ?": "Želite li izbrisati nakon generiranja?",
-        "Considerar espaço ?": "Razmislite o razmacima?",
-        "It's too big": "Prevelika je."
-    }
+	"translation": {
+		"Hello": "Pozdrav",
+		"Erro": "Greška",
+		"O texo não é um codigo base64 valido": "Tekst nije valjani kod base64",
+		"O valor de entrada não deve ser uma string vazia": "Ulazna vrijednost ne smije biti prazan niz",
+		"Mudar idioma": "Promjena jezika",
+		"Base 64": "Baza 64",
+		"Criptografar": "Šifrirati",
+		"Descriptografar": "Dešifrirati",
+		"Digite algo ou cole aqui o código": "Ovdje upišite nešto ili zalijepite kôd",
+		"Caracteres": "Znakova",
+		"Recortar": "Rezati",
+		"Copiar": "Kopija",
+		"Colar": "Pasta",
+		"Limpar": "Jasan",
+		"Ajude o dev": "Pomozite dev: ",
+		"Buy me a coffee": "Kupi mi kavu",
+		"Apagar apos gerar ?": "Želite li izbrisati nakon generiranja?",
+		"Considerar espaço ?": "Razmislite o razmacima?",
+		"It's too big": "Prevelika je."
+	}
 }

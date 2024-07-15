@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Olá;",
-        "Erro": "Erro",
-        "O texo não é um codigo base64 valido": "O texto não é um código base64 válido",
-        "O valor de entrada não deve ser uma string vazia": "O valor de entrada não deve ser uma cadeia de caracteres vazia",
-        "Mudar idioma": "Alterar o Idioma",
-        "Base 64": "Base 64",
-        "Criptografar": "Criptografar",
-        "Descriptografar": "Desencriptar",
-        "Digite algo ou cole aqui o código": "Digite algo ou cole o código aqui",
-        "Caracteres": "Personagens",
-        "Recortar": "Corte",
-        "Copiar": "Copiar",
-        "Colar": "Colar",
-        "Limpar": "Limpar",
-        "Ajude o dev": "Ajude o desenvolvedor: ",
-        "Buy me a coffee": "Compre-me um café",
-        "Apagar apos gerar ?": "Excluir depois de gerar?",
-        "Considerar espaço ?": "Considera espaços?",
-        "It's too big": "É muito grande"
-    }
+	"translation": {
+		"Hello": "Olá;",
+		"Erro": "Erro",
+		"O texo não é um codigo base64 valido": "O texto não é um código base64 válido",
+		"O valor de entrada não deve ser uma string vazia": "O valor de entrada não deve ser uma cadeia de caracteres vazia",
+		"Mudar idioma": "Alterar o Idioma",
+		"Base 64": "Base 64",
+		"Criptografar": "Criptografar",
+		"Descriptografar": "Desencriptar",
+		"Digite algo ou cole aqui o código": "Digite algo ou cole o código aqui",
+		"Caracteres": "Personagens",
+		"Recortar": "Corte",
+		"Copiar": "Copiar",
+		"Colar": "Colar",
+		"Limpar": "Limpar",
+		"Ajude o dev": "Ajude o desenvolvedor: ",
+		"Buy me a coffee": "Compre-me um café",
+		"Apagar apos gerar ?": "Excluir depois de gerar?",
+		"Considerar espaço ?": "Considera espaços?",
+		"It's too big": "É muito grande"
+	}
 }

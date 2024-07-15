@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Xin chào",
-        "Erro": "Lỗi",
-        "O texo não é um codigo base64 valido": "Văn bản không phải là mã base64 hợp lệ",
-        "O valor de entrada não deve ser uma string vazia": "Giá trị đầu vào không được là một chuỗi trống",
-        "Mudar idioma": "Thay đổi ngôn ngữ",
-        "Base 64": "Cơ sở 64",
-        "Criptografar": "Mã hóa",
-        "Descriptografar": "Giải mã",
-        "Digite algo ou cole aqui o código": "Nhập nội dung nào đó hoặc dán mã vào đây",
-        "Caracteres": "Ký tự",
-        "Recortar": "Cắt",
-        "Copiar": "Bản sao",
-        "Colar": "Dán",
-        "Limpar": "Trong",
-        "Ajude o dev": "Giúp nhà phát triển: ",
-        "Buy me a coffee": "Mua cho tôi một ly cà phê",
-        "Apagar apos gerar ?": "Xóa sau khi tạo?",
-        "Considerar espaço ?": "Xem xét không gian?",
-        "It's too big": "Nó quá lớn"
-    }
+	"translation": {
+		"Hello": "Xin chào",
+		"Erro": "Lỗi",
+		"O texo não é um codigo base64 valido": "Văn bản không phải là mã base64 hợp lệ",
+		"O valor de entrada não deve ser uma string vazia": "Giá trị đầu vào không được là một chuỗi trống",
+		"Mudar idioma": "Thay đổi ngôn ngữ",
+		"Base 64": "Cơ sở 64",
+		"Criptografar": "Mã hóa",
+		"Descriptografar": "Giải mã",
+		"Digite algo ou cole aqui o código": "Nhập nội dung nào đó hoặc dán mã vào đây",
+		"Caracteres": "Ký tự",
+		"Recortar": "Cắt",
+		"Copiar": "Bản sao",
+		"Colar": "Dán",
+		"Limpar": "Trong",
+		"Ajude o dev": "Giúp nhà phát triển: ",
+		"Buy me a coffee": "Mua cho tôi một ly cà phê",
+		"Apagar apos gerar ?": "Xóa sau khi tạo?",
+		"Considerar espaço ?": "Xem xét không gian?",
+		"It's too big": "Nó quá lớn"
+	}
 }

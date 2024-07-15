@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "مرحبا",
-        "Erro": "خطأ",
-        "O texo não é um codigo base64 valido": "النص ليس رمز base64 صالح",
-        "O valor de entrada não deve ser uma string vazia": "يجب ألا تكون قيمة الإدخال سلسلة فارغة",
-        "Mudar idioma": "تغيير اللغة",
-        "Base 64": "قاعدة 64",
-        "Criptografar": "تشفير",
-        "Descriptografar": "فك تشفير",
-        "Digite algo ou cole aqui o código": "اكتب شيئا أو الصق الكود هنا",
-        "Caracteres": "الاحرف",
-        "Recortar": "قص",
-        "Copiar": "نسخ",
-        "Colar": "معجون",
-        "Limpar": "واضح",
-        "Ajude o dev": "مساعدة المطور: ",
-        "Buy me a coffee": "اشتر لي قهوة",
-        "Apagar apos gerar ?": "حذف بعد إنشاء؟",
-        "Considerar espaço ?": "ضع في اعتبارك المساحات؟",
-        "It's too big": "إنه كبير جدا"
-    }
+	"translation": {
+		"Hello": "مرحبا",
+		"Erro": "خطأ",
+		"O texo não é um codigo base64 valido": "النص ليس رمز base64 صالح",
+		"O valor de entrada não deve ser uma string vazia": "يجب ألا تكون قيمة الإدخال سلسلة فارغة",
+		"Mudar idioma": "تغيير اللغة",
+		"Base 64": "قاعدة 64",
+		"Criptografar": "تشفير",
+		"Descriptografar": "فك تشفير",
+		"Digite algo ou cole aqui o código": "اكتب شيئا أو الصق الكود هنا",
+		"Caracteres": "الاحرف",
+		"Recortar": "قص",
+		"Copiar": "نسخ",
+		"Colar": "معجون",
+		"Limpar": "واضح",
+		"Ajude o dev": "مساعدة المطور: ",
+		"Buy me a coffee": "اشتر لي قهوة",
+		"Apagar apos gerar ?": "حذف بعد إنشاء؟",
+		"Considerar espaço ?": "ضع في اعتبارك المساحات؟",
+		"It's too big": "إنه كبير جدا"
+	}
 }

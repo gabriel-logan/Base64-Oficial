@@ -1,21 +1,21 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { RFValue } from '../Responsive';
+import { RFValue } from "../Responsive";
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: RFValue(20),
-		justifyContent: 'center',
-		alignItems: 'center',
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	title: {
 		fontSize: RFValue(24),
-		fontWeight: 'bold',
+		fontWeight: "bold",
 		marginBottom: RFValue(20),
 	},
 	buttonContainer: {
-		flexDirection: 'row',
+		flexDirection: "row",
 		marginBottom: RFValue(20),
 	},
 	buttonContainerText: {
@@ -23,24 +23,24 @@ const styles = StyleSheet.create({
 	},
 	button: {
 		flex: 1,
-		alignItems: 'center',
+		alignItems: "center",
 		padding: RFValue(10),
 		margin: RFValue(5),
-		backgroundColor: '#3498db',
+		backgroundColor: "#3498db",
 		borderRadius: 4,
 	},
 	inputContainer: {
-		width: '100%',
+		width: "100%",
 		marginBottom: RFValue(10),
 	},
 	input: {
 		borderWidth: 1,
-		borderColor: '#ccc',
+		borderColor: "#ccc",
 		borderRadius: 5,
 		padding: RFValue(10),
 		height: RFValue(230),
-		textAlignVertical: 'top',
-		backgroundColor: '#f8f8f8',
+		textAlignVertical: "top",
+		backgroundColor: "#f8f8f8",
 		elevation: 1,
 		fontSize: RFValue(16),
 	},
@@ -48,17 +48,17 @@ const styles = StyleSheet.create({
 		marginBottom: RFValue(10),
 	},
 	charCountText: {
-		color: 'gray',
+		color: "gray",
 	},
 	actionContainer: {
-		flexDirection: 'row',
+		flexDirection: "row",
 		marginBottom: RFValue(20),
 	},
 	actionButton: {
-		alignItems: 'center',
+		alignItems: "center",
 		padding: RFValue(10),
 		margin: RFValue(5),
-		backgroundColor: '#27ae60',
+		backgroundColor: "#27ae60",
 		width: RFValue(90),
 		borderRadius: 4,
 	},
@@ -68,10 +68,10 @@ const styles = StyleSheet.create({
 	languageContainer: {
 		flex: 1,
 		top: RFValue(35),
-		alignSelf: 'flex-end',
+		alignSelf: "flex-end",
 	},
 	languageButton: {
-		backgroundColor: '#e74c3c',
+		backgroundColor: "#e74c3c",
 		padding: RFValue(10),
 		borderRadius: 4,
 	},
@@ -80,33 +80,33 @@ const styles = StyleSheet.create({
 	},
 	footer: {
 		flex: 1,
-		justifyContent: 'flex-end',
+		justifyContent: "flex-end",
 	},
 	helpContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
 		marginTop: RFValue(20),
 	},
 	helpText: {
 		fontSize: RFValue(16),
-		fontWeight: 'bold',
+		fontWeight: "bold",
 		marginRight: RFValue(10),
 	},
 	coffeeButton: {
-		backgroundColor: '#FFA500', // Cor de laranja (você pode alterar para sua cor preferida)
+		backgroundColor: "#FFA500", // Cor de laranja (você pode alterar para sua cor preferida)
 		padding: RFValue(10),
 		borderRadius: 5,
 	},
 	coffeeButtonText: {
-		color: 'white',
-		fontWeight: 'bold',
+		color: "white",
+		fontWeight: "bold",
 		fontSize: RFValue(14),
 	},
 	divCheckBox: {},
 	row: {
-		flexDirection: 'row', // Define o layout em linha (row) para os elementos filhos
-		alignItems: 'center', // Centraliza verticalmente os elementos dentro de cada linha
+		flexDirection: "row", // Define o layout em linha (row) para os elementos filhos
+		alignItems: "center", // Centraliza verticalmente os elementos dentro de cada linha
 		marginRight: RFValue(10), // Espaço entre as linhas (você pode ajustar conforme necessário)
 		marginTop: RFValue(5),
 	},

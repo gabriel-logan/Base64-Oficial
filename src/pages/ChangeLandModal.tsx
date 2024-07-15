@@ -1,12 +1,12 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from "react";
 
-import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { RFValue } from '../Responsive';
+import { RFValue } from "../Responsive";
 
 interface ChangeLangModalProps {
 	modalChangeLang: boolean;
@@ -19,58 +19,58 @@ export default function ChangeLangModal({
 }: ChangeLangModalProps) {
 	const { i18n } = useTranslation();
 	const changeLanguage = async (lang: string) => {
-		await AsyncStorage.setItem('selectedLanguage', lang);
+		await AsyncStorage.setItem("selectedLanguage", lang);
 		i18n.changeLanguage(lang);
 	};
 
 	const languageMappings: Record<string, string> = {
-		af: 'Afrikaans',
-		ar: 'العربية',
-		bg: 'български',
-		ca: 'Català',
-		cs: 'Čeština',
-		cy: 'Cymraeg',
-		da: 'Dansk',
-		de: 'Deutsch',
-		el: 'Ελληνικά',
-		en: 'English',
-		es: 'Español',
-		fa: 'فارسی',
-		fi: 'Suomi',
-		fr: 'Français',
-		he: 'עברית',
-		hi: 'हिन्दी',
-		hr: 'Hrvatski',
-		hu: 'Magyar',
-		id: 'Bahasa Indonesia',
-		is: 'Íslenska',
-		it: 'Italiano',
-		ja: '日本語',
-		ko: '한국어',
-		lt: 'Lietuvių',
-		lv: 'Latviešu',
-		ms: 'Bahasa Melayu',
-		mt: 'Malti',
-		nb: 'Norsk (Bokmål)',
-		nl: 'Nederlands',
-		pl: 'Polski',
-		ptBR: 'Português (BR)',
-		ptPT: 'Português (PT)',
-		ro: 'Română',
-		ru: 'Русский',
-		sk: 'Slovenčina',
-		sl: 'Slovenščina',
-		srLatn: 'Srpski (Latinica)',
-		sv: 'Svenska',
-		sw: 'Kiswahili (Latin)',
-		th: 'ไทย',
-		tr: 'Türkçe',
-		uk: 'Українська',
-		ur: 'اردو',
-		vi: 'Tiếng Việt',
-		zh: '中文',
-		zhHans: '简体中文',
-		zhHant: '繁體中文',
+		af: "Afrikaans",
+		ar: "العربية",
+		bg: "български",
+		ca: "Català",
+		cs: "Čeština",
+		cy: "Cymraeg",
+		da: "Dansk",
+		de: "Deutsch",
+		el: "Ελληνικά",
+		en: "English",
+		es: "Español",
+		fa: "فارسی",
+		fi: "Suomi",
+		fr: "Français",
+		he: "עברית",
+		hi: "हिन्दी",
+		hr: "Hrvatski",
+		hu: "Magyar",
+		id: "Bahasa Indonesia",
+		is: "Íslenska",
+		it: "Italiano",
+		ja: "日本語",
+		ko: "한국어",
+		lt: "Lietuvių",
+		lv: "Latviešu",
+		ms: "Bahasa Melayu",
+		mt: "Malti",
+		nb: "Norsk (Bokmål)",
+		nl: "Nederlands",
+		pl: "Polski",
+		ptBR: "Português (BR)",
+		ptPT: "Português (PT)",
+		ro: "Română",
+		ru: "Русский",
+		sk: "Slovenčina",
+		sl: "Slovenščina",
+		srLatn: "Srpski (Latinica)",
+		sv: "Svenska",
+		sw: "Kiswahili (Latin)",
+		th: "ไทย",
+		tr: "Türkçe",
+		uk: "Українська",
+		ur: "اردو",
+		vi: "Tiếng Việt",
+		zh: "中文",
+		zhHans: "简体中文",
+		zhHant: "繁體中文",
 	};
 
 	const languages: string[] = Object.keys(languageMappings);
@@ -93,9 +93,9 @@ export default function ChangeLangModal({
 					))}
 					<TouchableOpacity
 						style={[styles.languageButton, { marginBottom: 35 }]}
-						onPress={() => changeLanguage('klingon')}
+						onPress={() => changeLanguage("klingon")}
 					>
-						<Text style={styles.languageText}>{'Klingon'}</Text>
+						<Text style={styles.languageText}>{"Klingon"}</Text>
 					</TouchableOpacity>
 				</ScrollView>
 			</TouchableOpacity>
@@ -106,13 +106,13 @@ export default function ChangeLangModal({
 const styles = StyleSheet.create({
 	modalContainer: {
 		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: 'rgba(0, 0, 0, 0.5)', // Um fundo semi-transparente para o modal
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "rgba(0, 0, 0, 0.5)", // Um fundo semi-transparente para o modal
 	},
 	scrollContainer: {
-		width: '80%', // Largura do conteúdo do ScrollView
-		backgroundColor: 'white', // Cor de fundo do ScrollView
+		width: "80%", // Largura do conteúdo do ScrollView
+		backgroundColor: "white", // Cor de fundo do ScrollView
 		borderRadius: 4,
 		maxHeight: RFValue(450),
 		padding: RFValue(20),
@@ -120,10 +120,10 @@ const styles = StyleSheet.create({
 	languageButton: {
 		padding: RFValue(10),
 		borderBottomWidth: 1,
-		borderBottomColor: '#ccc', // Cor da linha separadora		borderWidth: 1,
+		borderBottomColor: "#ccc", // Cor da linha separadora		borderWidth: 1,
 	},
 	languageText: {
 		fontSize: RFValue(16),
-		fontWeight: 'bold',
+		fontWeight: "bold",
 	},
 });

@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Ħello",
-        "Erro": "Żball",
-        "O texo não é um codigo base64 valido": "It-test mhuwiex kodiċi bażi validu64",
-        "O valor de entrada não deve ser uma string vazia": "Il-valur tad-dħul m'għandux ikun sekwenza vojta",
-        "Mudar idioma": "Ibdel il-lingwa",
-        "Base 64": "Bażi 64",
-        "Criptografar": "Jiċċifra",
-        "Descriptografar": "Iddeċifra",
-        "Digite algo ou cole aqui o código": "Ittajpja xi ħaġa jew ippejstja l-kodiċi hawn",
-        "Caracteres": "Karattri",
-        "Recortar": "Maqtugħa",
-        "Copiar": "Kopja",
-        "Colar": "Ippejstja",
-        "Limpar": "Ċara",
-        "Ajude o dev": "Għin lid-dev: ",
-        "Buy me a coffee": "Ixtrili kafè",
-        "Apagar apos gerar ?": "Ħassar wara li tiġġenera?",
-        "Considerar espaço ?": "Ikkunsidra l-ispazji?",
-        "It's too big": "Huwa kbir wisq"
-    }
+	"translation": {
+		"Hello": "Ħello",
+		"Erro": "Żball",
+		"O texo não é um codigo base64 valido": "It-test mhuwiex kodiċi bażi validu64",
+		"O valor de entrada não deve ser uma string vazia": "Il-valur tad-dħul m'għandux ikun sekwenza vojta",
+		"Mudar idioma": "Ibdel il-lingwa",
+		"Base 64": "Bażi 64",
+		"Criptografar": "Jiċċifra",
+		"Descriptografar": "Iddeċifra",
+		"Digite algo ou cole aqui o código": "Ittajpja xi ħaġa jew ippejstja l-kodiċi hawn",
+		"Caracteres": "Karattri",
+		"Recortar": "Maqtugħa",
+		"Copiar": "Kopja",
+		"Colar": "Ippejstja",
+		"Limpar": "Ċara",
+		"Ajude o dev": "Għin lid-dev: ",
+		"Buy me a coffee": "Ixtrili kafè",
+		"Apagar apos gerar ?": "Ħassar wara li tiġġenera?",
+		"Considerar espaço ?": "Ikkunsidra l-ispazji?",
+		"It's too big": "Huwa kbir wisq"
+	}
 }

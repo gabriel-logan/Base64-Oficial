@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Helo",
-        "Erro": "Gwall",
-        "O texo não é um codigo base64 valido": "Nid yw'r testun yn cod base64 dilys",
-        "O valor de entrada não deve ser uma string vazia": "Ni ddylai gwerth mewnbwn fod yn llinyn gwag",
-        "Mudar idioma": "Newid iaith",
-        "Base 64": "Sylfaen 64",
-        "Criptografar": "Amgryptio",
-        "Descriptografar": "Ddadgryptio",
-        "Digite algo ou cole aqui o código": "Teipiwch rywbeth neu gludwch y cod yma",
-        "Caracteres": "Cymeriadau",
-        "Recortar": "Torri",
-        "Copiar": "Copi",
-        "Colar": "Pastio",
-        "Limpar": "Clirio",
-        "Ajude o dev": "Helpwch y dev: ",
-        "Buy me a coffee": "Prynu coffi i mi",
-        "Apagar apos gerar ?": "Dileu ar ôl cynhyrchu?",
-        "Considerar espaço ?": "Ystyried gofodau?",
-        "It's too big": "Mae'n rhy fawr"
-    }
+	"translation": {
+		"Hello": "Helo",
+		"Erro": "Gwall",
+		"O texo não é um codigo base64 valido": "Nid yw'r testun yn cod base64 dilys",
+		"O valor de entrada não deve ser uma string vazia": "Ni ddylai gwerth mewnbwn fod yn llinyn gwag",
+		"Mudar idioma": "Newid iaith",
+		"Base 64": "Sylfaen 64",
+		"Criptografar": "Amgryptio",
+		"Descriptografar": "Ddadgryptio",
+		"Digite algo ou cole aqui o código": "Teipiwch rywbeth neu gludwch y cod yma",
+		"Caracteres": "Cymeriadau",
+		"Recortar": "Torri",
+		"Copiar": "Copi",
+		"Colar": "Pastio",
+		"Limpar": "Clirio",
+		"Ajude o dev": "Helpwch y dev: ",
+		"Buy me a coffee": "Prynu coffi i mi",
+		"Apagar apos gerar ?": "Dileu ar ôl cynhyrchu?",
+		"Considerar espaço ?": "Ystyried gofodau?",
+		"It's too big": "Mae'n rhy fawr"
+	}
 }

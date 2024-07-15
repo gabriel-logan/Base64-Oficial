@@ -1,5 +1,5 @@
 // Lib para fontes responsivas, primeiro usa porcentagem, segundo usa tamanho da tela
-import { RFPercentage, RFValue as fixedRFValue } from 'react-native-responsive-fontsize';
+import { RFPercentage, RFValue as fixedRFValue } from "react-native-responsive-fontsize";
 
 /**
  * Método

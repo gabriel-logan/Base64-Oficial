@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hallo",
-        "Erro": "Fehler",
-        "O texo não é um codigo base64 valido": "Der Text ist kein gültiger Base64-Code",
-        "O valor de entrada não deve ser uma string vazia": "Der Eingabewert sollte keine leere Zeichenfolge sein",
-        "Mudar idioma": "Sprache ändern",
-        "Base 64": "Sockel 64",
-        "Criptografar": "Verschlüsseln",
-        "Descriptografar": "Entschlüsseln",
-        "Digite algo ou cole aqui o código": "Geben Sie hier etwas ein oder fügen Sie den Code ein",
-        "Caracteres": "Zeichen",
-        "Recortar": "Schneiden",
-        "Copiar": "Kopieren",
-        "Colar": "Kleister",
-        "Limpar": "Klar",
-        "Ajude o dev": "Helfen Sie dem Entwickler: ",
-        "Buy me a coffee": "Kauf mir einen Kaffee",
-        "Apagar apos gerar ?": "Nach dem Generieren löschen?",
-        "Considerar espaço ?": "Betrachten Sie Räume?",
-        "It's too big": "Es ist zu groß"
-    }
+	"translation": {
+		"Hello": "Hallo",
+		"Erro": "Fehler",
+		"O texo não é um codigo base64 valido": "Der Text ist kein gültiger Base64-Code",
+		"O valor de entrada não deve ser uma string vazia": "Der Eingabewert sollte keine leere Zeichenfolge sein",
+		"Mudar idioma": "Sprache ändern",
+		"Base 64": "Sockel 64",
+		"Criptografar": "Verschlüsseln",
+		"Descriptografar": "Entschlüsseln",
+		"Digite algo ou cole aqui o código": "Geben Sie hier etwas ein oder fügen Sie den Code ein",
+		"Caracteres": "Zeichen",
+		"Recortar": "Schneiden",
+		"Copiar": "Kopieren",
+		"Colar": "Kleister",
+		"Limpar": "Klar",
+		"Ajude o dev": "Helfen Sie dem Entwickler: ",
+		"Buy me a coffee": "Kauf mir einen Kaffee",
+		"Apagar apos gerar ?": "Nach dem Generieren löschen?",
+		"Considerar espaço ?": "Betrachten Sie Räume?",
+		"It's too big": "Es ist zu groß"
+	}
 }

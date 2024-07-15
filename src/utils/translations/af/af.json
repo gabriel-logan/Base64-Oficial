@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hallo",
-        "Erro": "Fout",
-        "O texo não é um codigo base64 valido": "Die teks is nie 'n geldige base64-kode nie",
-        "O valor de entrada não deve ser uma string vazia": "Invoerwaarde moet nie 'n leë string wees nie",
-        "Mudar idioma": "Verander taal",
-        "Base 64": "Basis 64",
-        "Criptografar": "Enkripteer",
-        "Descriptografar": "Dekripteer",
-        "Digite algo ou cole aqui o código": "Tik iets of plak die kode hier",
-        "Caracteres": "Karakters",
-        "Recortar": "Knip",
-        "Copiar": "Kopieer",
-        "Colar": "Plak",
-        "Limpar": "Duidelik",
-        "Ajude o dev": "Help die dev: ",
-        "Buy me a coffee": "Koop vir my 'n koffie",
-        "Apagar apos gerar ?": "Verwyder nadat dit gegenereer is?",
-        "Considerar espaço ?": "Oorweeg ruimtes?",
-        "It's too big": "Dis te groot"
-    }
+	"translation": {
+		"Hello": "Hallo",
+		"Erro": "Fout",
+		"O texo não é um codigo base64 valido": "Die teks is nie 'n geldige base64-kode nie",
+		"O valor de entrada não deve ser uma string vazia": "Invoerwaarde moet nie 'n leë string wees nie",
+		"Mudar idioma": "Verander taal",
+		"Base 64": "Basis 64",
+		"Criptografar": "Enkripteer",
+		"Descriptografar": "Dekripteer",
+		"Digite algo ou cole aqui o código": "Tik iets of plak die kode hier",
+		"Caracteres": "Karakters",
+		"Recortar": "Knip",
+		"Copiar": "Kopieer",
+		"Colar": "Plak",
+		"Limpar": "Duidelik",
+		"Ajude o dev": "Help die dev: ",
+		"Buy me a coffee": "Koop vir my 'n koffie",
+		"Apagar apos gerar ?": "Verwyder nadat dit gegenereer is?",
+		"Considerar espaço ?": "Oorweeg ruimtes?",
+		"It's too big": "Dis te groot"
+	}
 }

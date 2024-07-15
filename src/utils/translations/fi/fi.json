@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hei",
-        "Erro": "Virhe",
-        "O texo não é um codigo base64 valido": "Teksti ei ole kelvollinen base64-koodi",
-        "O valor de entrada não deve ser uma string vazia": "Syötearvo ei saa olla tyhjä merkkijono",
-        "Mudar idioma": "Vaihda kieli",
-        "Base 64": "Pohja 64",
-        "Criptografar": "Salata",
-        "Descriptografar": "Purkaa",
-        "Digite algo ou cole aqui o código": "Kirjoita jotain tai liitä koodi tähän",
-        "Caracteres": "Merkkiä",
-        "Recortar": "Leikata",
-        "Copiar": "Kopioida",
-        "Colar": "Tahna",
-        "Limpar": "Selvä",
-        "Ajude o dev": "Auta kehittäjää: ",
-        "Buy me a coffee": "Osta minulle kahvia",
-        "Apagar apos gerar ?": "Poista luomisen jälkeen?",
-        "Considerar espaço ?": "Harkitse tiloja?",
-        "It's too big": "Se on liian iso"
-    }
+	"translation": {
+		"Hello": "Hei",
+		"Erro": "Virhe",
+		"O texo não é um codigo base64 valido": "Teksti ei ole kelvollinen base64-koodi",
+		"O valor de entrada não deve ser uma string vazia": "Syötearvo ei saa olla tyhjä merkkijono",
+		"Mudar idioma": "Vaihda kieli",
+		"Base 64": "Pohja 64",
+		"Criptografar": "Salata",
+		"Descriptografar": "Purkaa",
+		"Digite algo ou cole aqui o código": "Kirjoita jotain tai liitä koodi tähän",
+		"Caracteres": "Merkkiä",
+		"Recortar": "Leikata",
+		"Copiar": "Kopioida",
+		"Colar": "Tahna",
+		"Limpar": "Selvä",
+		"Ajude o dev": "Auta kehittäjää: ",
+		"Buy me a coffee": "Osta minulle kahvia",
+		"Apagar apos gerar ?": "Poista luomisen jälkeen?",
+		"Considerar espaço ?": "Harkitse tiloja?",
+		"It's too big": "Se on liian iso"
+	}
 }

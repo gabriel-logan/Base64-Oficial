@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hola",
-        "Erro": "Error",
-        "O texo não é um codigo base64 valido": "El text no és un codi base 64 vàlid",
-        "O valor de entrada não deve ser uma string vazia": "El valor d'entrada no ha de ser una cadena buida",
-        "Mudar idioma": "Canviar idioma",
-        "Base 64": "Base 64",
-        "Criptografar": "Encriptar",
-        "Descriptografar": "Decrypt",
-        "Digite algo ou cole aqui o código": "Escriviu alguna cosa o enganxeu el codi aquí",
-        "Caracteres": "Caràcters",
-        "Recortar": "Tallar",
-        "Copiar": "Copiar",
-        "Colar": "Enganxar",
-        "Limpar": "Clar",
-        "Ajude o dev": "Ajudeu els desenvolupadors: ",
-        "Buy me a coffee": "Compra'm un cafè",
-        "Apagar apos gerar ?": "Suprimeix després de generar?",
-        "Considerar espaço ?": "Penseu en els espais?",
-        "It's too big": "És massa gran"
-    }
+	"translation": {
+		"Hello": "Hola",
+		"Erro": "Error",
+		"O texo não é um codigo base64 valido": "El text no és un codi base 64 vàlid",
+		"O valor de entrada não deve ser uma string vazia": "El valor d'entrada no ha de ser una cadena buida",
+		"Mudar idioma": "Canviar idioma",
+		"Base 64": "Base 64",
+		"Criptografar": "Encriptar",
+		"Descriptografar": "Decrypt",
+		"Digite algo ou cole aqui o código": "Escriviu alguna cosa o enganxeu el codi aquí",
+		"Caracteres": "Caràcters",
+		"Recortar": "Tallar",
+		"Copiar": "Copiar",
+		"Colar": "Enganxar",
+		"Limpar": "Clar",
+		"Ajude o dev": "Ajudeu els desenvolupadors: ",
+		"Buy me a coffee": "Compra'm un cafè",
+		"Apagar apos gerar ?": "Suprimeix després de generar?",
+		"Considerar espaço ?": "Penseu en els espais?",
+		"It's too big": "És massa gran"
+	}
 }

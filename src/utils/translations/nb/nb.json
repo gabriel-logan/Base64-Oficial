@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Hei",
-        "Erro": "Feil",
-        "O texo não é um codigo base64 valido": "Teksten er ikke en gyldig base64-kode",
-        "O valor de entrada não deve ser uma string vazia": "Inndataverdien bør ikke være en tom streng",
-        "Mudar idioma": "Bytt språk",
-        "Base 64": "Base 64",
-        "Criptografar": "Kryptere",
-        "Descriptografar": "Dekryptere",
-        "Digite algo ou cole aqui o código": "Skriv inn noe eller lim inn koden her",
-        "Caracteres": "Tegn",
-        "Recortar": "Klippe",
-        "Copiar": "Kopi",
-        "Colar": "Lime inn",
-        "Limpar": "Klar",
-        "Ajude o dev": "Hjelp utvikleren: ",
-        "Buy me a coffee": "Kjøp meg en kaffe",
-        "Apagar apos gerar ?": "Slette etter generering?",
-        "Considerar espaço ?": "Vurdere mellomrom?",
-        "It's too big": "Det er for stort"
-    }
+	"translation": {
+		"Hello": "Hei",
+		"Erro": "Feil",
+		"O texo não é um codigo base64 valido": "Teksten er ikke en gyldig base64-kode",
+		"O valor de entrada não deve ser uma string vazia": "Inndataverdien bør ikke være en tom streng",
+		"Mudar idioma": "Bytt språk",
+		"Base 64": "Base 64",
+		"Criptografar": "Kryptere",
+		"Descriptografar": "Dekryptere",
+		"Digite algo ou cole aqui o código": "Skriv inn noe eller lim inn koden her",
+		"Caracteres": "Tegn",
+		"Recortar": "Klippe",
+		"Copiar": "Kopi",
+		"Colar": "Lime inn",
+		"Limpar": "Klar",
+		"Ajude o dev": "Hjelp utvikleren: ",
+		"Buy me a coffee": "Kjøp meg en kaffe",
+		"Apagar apos gerar ?": "Slette etter generering?",
+		"Considerar espaço ?": "Vurdere mellomrom?",
+		"It's too big": "Det er for stort"
+	}
 }

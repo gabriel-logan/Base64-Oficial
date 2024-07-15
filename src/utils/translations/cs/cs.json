@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Dobrý den",
-        "Erro": "Chyba",
-        "O texo não é um codigo base64 valido": "Text není platný kód base64",
-        "O valor de entrada não deve ser uma string vazia": "Vstupní hodnota by neměla být prázdný řetězec",
-        "Mudar idioma": "Změnit jazyk",
-        "Base 64": "Základna 64",
-        "Criptografar": "Zašifrovat",
-        "Descriptografar": "Dekódovat",
-        "Digite algo ou cole aqui o código": "Sem něco napište nebo vložte kód",
-        "Caracteres": "Znaky",
-        "Recortar": "Řezat",
-        "Copiar": "Kopírovat",
-        "Colar": "Pasta",
-        "Limpar": "Jasný",
-        "Ajude o dev": "Pomozte vývoji: ",
-        "Buy me a coffee": "Kupte mi kávu",
-        "Apagar apos gerar ?": "Smazat po vygenerování?",
-        "Considerar espaço ?": "Uvažujete o prostorech?",
-        "It's too big": "Je příliš velký"
-    }
+	"translation": {
+		"Hello": "Dobrý den",
+		"Erro": "Chyba",
+		"O texo não é um codigo base64 valido": "Text není platný kód base64",
+		"O valor de entrada não deve ser uma string vazia": "Vstupní hodnota by neměla být prázdný řetězec",
+		"Mudar idioma": "Změnit jazyk",
+		"Base 64": "Základna 64",
+		"Criptografar": "Zašifrovat",
+		"Descriptografar": "Dekódovat",
+		"Digite algo ou cole aqui o código": "Sem něco napište nebo vložte kód",
+		"Caracteres": "Znaky",
+		"Recortar": "Řezat",
+		"Copiar": "Kopírovat",
+		"Colar": "Pasta",
+		"Limpar": "Jasný",
+		"Ajude o dev": "Pomozte vývoji: ",
+		"Buy me a coffee": "Kupte mi kávu",
+		"Apagar apos gerar ?": "Smazat po vygenerování?",
+		"Considerar espaço ?": "Uvažujete o prostorech?",
+		"It's too big": "Je příliš velký"
+	}
 }

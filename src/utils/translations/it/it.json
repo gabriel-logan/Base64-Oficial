@@ -1,23 +1,23 @@
 {
-    "translation": {
-        "Hello": "Ciao",
-        "Erro": "Errore",
-        "O texo não é um codigo base64 valido": "Il testo non è un codice base64 valido",
-        "O valor de entrada não deve ser uma string vazia": "Il valore di input non deve essere una stringa vuota",
-        "Mudar idioma": "Cambia lingua",
-        "Base 64": "Base 64",
-        "Criptografar": "Cifrare",
-        "Descriptografar": "Decriptare",
-        "Digite algo ou cole aqui o código": "Digita qualcosa o incolla qui il codice",
-        "Caracteres": "Personaggi",
-        "Recortar": "Tagliare",
-        "Copiar": "Copiare",
-        "Colar": "Incollare",
-        "Limpar": "Chiaro",
-        "Ajude o dev": "Aiuta gli sviluppatori a: ",
-        "Buy me a coffee": "Comprami un caffè",
-        "Apagar apos gerar ?": "Eliminare dopo la generazione?",
-        "Considerar espaço ?": "Considerare gli spazi?",
-        "It's too big": "È troppo grande"
-    }
+	"translation": {
+		"Hello": "Ciao",
+		"Erro": "Errore",
+		"O texo não é um codigo base64 valido": "Il testo non è un codice base64 valido",
+		"O valor de entrada não deve ser uma string vazia": "Il valore di input non deve essere una stringa vuota",
+		"Mudar idioma": "Cambia lingua",
+		"Base 64": "Base 64",
+		"Criptografar": "Cifrare",
+		"Descriptografar": "Decriptare",
+		"Digite algo ou cole aqui o código": "Digita qualcosa o incolla qui il codice",
+		"Caracteres": "Personaggi",
+		"Recortar": "Tagliare",
+		"Copiar": "Copiare",
+		"Colar": "Incollare",
+		"Limpar": "Chiaro",
+		"Ajude o dev": "Aiuta gli sviluppatori a: ",
+		"Buy me a coffee": "Comprami un caffè",
+		"Apagar apos gerar ?": "Eliminare dopo la generazione?",
+		"Considerar espaço ?": "Considerare gli spazi?",
+		"It's too big": "È troppo grande"
+	}
 }
