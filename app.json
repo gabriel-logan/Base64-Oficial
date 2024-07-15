@@ -1,49 +1,51 @@
 {
-	"expo": {
-		"name": "Base64-Oficial",
-		"slug": "Base64-Oficial",
-		"owner": "gabriellogan",
-		"githubUrl": "https://github.com/gabriel-logan/Base64-Oficial",
-		"version": "1.0.2",
-		"orientation": "portrait",
-		"icon": "./assets/icon.png",
-		"userInterfaceStyle": "automatic",
-		"splash": {
-			"image": "./assets/splash.png",
-			"resizeMode": "cover",
-			"backgroundColor": "#02bcd4"
-		},
-		"assetBundlePatterns": ["**/*"],
-		"ios": {
-			"supportsTablet": true
-		},
-		"android": {
-			"playStoreUrl": "https://play.google.com/store/apps/details?id=com.gabriellogan.Base64Oficial",
-			"adaptiveIcon": {
-				"foregroundImage": "./assets/icon.png",
-				"backgroundColor": "#02bcd4"
-			},
-			"package": "com.gabriellogan.Base64Oficial",
-			"versionCode": 4
-		},
-		"web": {
-			"favicon": "./assets/favicon.png"
-		},
-		"plugins": [
-			[
-				"expo-build-properties",
-				{
-					"android": {
-						"enableProguardInReleaseBuilds": true
-					}
-				}
-			],
-			"expo-localization"
-		],
-		"extra": {
-			"eas": {
-				"projectId": "8c4824c7-7fae-4838-ae51-6a36f78f9141"
-			}
-		}
-	}
+  "expo": {
+    "name": "Base64-Oficial",
+    "slug": "Base64-Oficial",
+    "owner": "gabriellogan",
+    "githubUrl": "https://github.com/gabriel-logan/Base64-Oficial",
+    "version": "1.0.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#02bcd4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.gabriellogan.Base64Oficial",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#02bcd4"
+      },
+      "package": "com.gabriellogan.Base64Oficial",
+      "versionCode": 5
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true
+          }
+        }
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8c4824c7-7fae-4838-ae51-6a36f78f9141"
+      }
+    }
+  }
 }
