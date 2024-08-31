@@ -9,7 +9,9 @@
 		"web": "expo start --web",
 		"test": "jest --verbose",
 		"test:coverage": "jest --coverage",
-		"test:watch": "jest --watchAll"
+		"test:watch": "jest --watchAll",
+		"test:verbose:coverage": "jest --coverage --verbose",
+		"pr-check": "yarn test:verbose:coverage"
 	},
 	"jest": {
 		"preset": "jest-expo",
