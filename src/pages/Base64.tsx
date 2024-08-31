@@ -103,7 +103,11 @@ export default function Base64() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.languageContainer}>
-				<TouchableOpacity style={styles.languageButton} onPress={() => setModalChangeLang(true)}>
+				<TouchableOpacity
+					testID="open-change-language-button"
+					style={styles.languageButton}
+					onPress={() => setModalChangeLang(true)}
+				>
 					<Text style={styles.languageButtonText}>{t("Mudar idioma")}</Text>
 				</TouchableOpacity>
 			</View>
@@ -134,16 +138,28 @@ export default function Base64() {
 				</Text>
 			</View>
 			<View style={styles.actionContainer}>
-				<TouchableOpacity style={styles.actionButton} onPress={cutToClipboard}>
+				<TouchableOpacity testID="button-cut" style={styles.actionButton} onPress={cutToClipboard}>
 					<Text style={styles.actionButtonText}>{t("Recortar")}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton} onPress={copyToClipboard}>
+				<TouchableOpacity
+					testID="button-copy"
+					style={styles.actionButton}
+					onPress={copyToClipboard}
+				>
 					<Text style={styles.actionButtonText}>{t("Copiar")}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton} onPress={pasteToClipboard}>
+				<TouchableOpacity
+					testID="button-paste"
+					style={styles.actionButton}
+					onPress={pasteToClipboard}
+				>
 					<Text style={styles.actionButtonText}>{t("Colar")}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.actionButton} onPress={cleanToClipboard}>
+				<TouchableOpacity
+					testID="button-clear"
+					style={styles.actionButton}
+					onPress={cleanToClipboard}
+				>
 					<Text style={styles.actionButtonText}>{t("Limpar")}</Text>
 				</TouchableOpacity>
 			</View>
@@ -151,6 +167,7 @@ export default function Base64() {
 				<View style={styles.row}>
 					<Text style={styles.text}>{t("Considerar espaço ?")}</Text>
 					<Checkbox
+						testID="consider-space-checkbox"
 						value={considerSpace}
 						onValueChange={async (value) => {
 							await AsyncStorage.setItem("considerSpaceAfterGenerate", JSON.stringify(value));
@@ -163,6 +180,7 @@ export default function Base64() {
 				<View style={styles.helpContainer}>
 					<Text style={styles.helpText}>{t("Ajude o dev")}</Text>
 					<TouchableOpacity
+						testID="buy-me-a-coffee-button"
 						style={styles.coffeeButton}
 						onPress={() => {
 							Linking.openURL("https://www.buymeacoffee.com/gabriellogan");

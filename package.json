@@ -6,7 +6,19 @@
 		"start": "expo start",
 		"android": "expo start --android",
 		"ios": "expo start --ios",
-		"web": "expo start --web"
+		"web": "expo start --web",
+		"test": "jest --verbose",
+		"test:coverage": "jest --coverage",
+		"test:watch": "jest --watchAll"
+	},
+	"jest": {
+		"preset": "jest-expo",
+		"setupFiles": [
+			"./jestSetupFile.js"
+		],
+		"transformIgnorePatterns": [
+			"node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg)"
+		]
 	},
 	"dependencies": {
 		"@react-native-async-storage/async-storage": "1.23.1",
@@ -31,6 +43,8 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.0",
+		"@testing-library/react-native": "^12.6.1",
+		"@types/jest": "^29.5.12",
 		"@types/react": "~18.2.14",
 		"@types/react-native-base64": "^0.2.0",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
@@ -38,8 +52,11 @@
 		"azure-translator-code": "^1.0.8",
 		"eslint": "^8.51.0",
 		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-jest": "^28.8.1",
 		"eslint-plugin-prettier": "^5.0.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"jest": "^29.7.0",
+		"jest-expo": "^51.0.4",
 		"prettier": "^3.0.3",
 		"typescript": "~5.3.3"
 	},

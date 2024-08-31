@@ -4,9 +4,10 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
+		"plugin:jest/recommended",
 	],
 	parser: "@typescript-eslint/parser",
-	plugins: ["@typescript-eslint", "react-hooks"],
+	plugins: ["jest", "@typescript-eslint", "react-hooks"],
 	root: true,
 	rules: {
 		"react-hooks/rules-of-hooks": "error", // Verifica as regras dos Hooks

@@ -17,7 +17,7 @@ export default function ChangeLangModal({
 	modalChangeLang,
 	setModalChangeLang,
 }: ChangeLangModalProps) {
-	const { i18n } = useTranslation();
+	const { i18n, t } = useTranslation();
 	const changeLanguage = async (lang: string) => {
 		await AsyncStorage.setItem("selectedLanguage", lang);
 		i18n.changeLanguage(lang);
@@ -76,11 +76,22 @@ export default function ChangeLangModal({
 	const languages: string[] = Object.keys(languageMappings);
 
 	return (
-		<Modal visible={modalChangeLang} onRequestClose={() => setModalChangeLang(false)} transparent>
-			<TouchableOpacity style={styles.modalContainer} onPress={() => setModalChangeLang(false)}>
+		<Modal
+			testID="modal-change-lang"
+			visible={modalChangeLang}
+			onRequestClose={() => setModalChangeLang(false)}
+			transparent
+		>
+			<TouchableOpacity
+				testID="modal-background"
+				style={styles.modalContainer}
+				onPress={() => setModalChangeLang(false)}
+			>
 				<ScrollView style={styles.scrollContainer}>
+					<Text style={styles.languageButtonText}>{t("Mudar idioma")}</Text>
 					{languages.map((languageCode) => (
 						<TouchableOpacity
+							testID={`language-button-${languageCode}`}
 							style={styles.languageButton}
 							onPress={() => {
 								changeLanguage(languageCode);
@@ -92,6 +103,7 @@ export default function ChangeLangModal({
 						</TouchableOpacity>
 					))}
 					<TouchableOpacity
+						testID="language-button-klingon"
 						style={[styles.languageButton, { marginBottom: 35 }]}
 						onPress={() => changeLanguage("klingon")}
 					>
@@ -125,5 +137,10 @@ const styles = StyleSheet.create({
 	languageText: {
 		fontSize: RFValue(16),
 		fontWeight: "bold",
+	},
+	languageButtonText: {
+		fontSize: RFValue(20),
+		fontWeight: "bold",
+		marginBottom: RFValue(20),
 	},
 });
