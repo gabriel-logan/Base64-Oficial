@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { RFValueWithFixedSecondParam } from "../Responsive";
+import { RFValueWithFixedSecondParam } from "..";
 import { Text } from "react-native";
 
 describe("Responsive", () => {

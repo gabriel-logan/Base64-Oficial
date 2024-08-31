@@ -1,3 +1,4 @@
 *.html
 geraTraducoes.js
 coverage
+__tests__
