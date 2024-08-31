@@ -21,3 +21,13 @@ jest.mock("react-i18next", () => ({
 }));
 
 jest.mock("react-native/Libraries/Utilities/BackHandler", () => mockBackHandler);
+
+jest.mock("expo-localization", () => ({
+	getLocales: () => [{ languageCode: "en", languageTag: "en-US", countryCode: "US" }],
+}));
+
+jest.mock("i18next", () => ({
+	changeLanguage: jest.fn(),
+	use: jest.fn().mockReturnThis(), // Add this line to mock the use method
+	init: jest.fn().mockReturnThis(), // Add this line to mock the init method
+}));

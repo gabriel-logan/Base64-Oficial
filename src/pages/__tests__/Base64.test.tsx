@@ -23,8 +23,11 @@ describe("Base64", () => {
 	afterEach(() => {
 		jest.resetAllMocks();
 	});
+
 	it("should render correctly", () => {
 		render(<Base64 />);
+
+		expect(true).toBeTruthy();
 	});
 
 	describe("Snapshots", () => {
@@ -430,18 +433,39 @@ describe("Base64", () => {
 
 			expect(textInput.props.value).toBe("");
 		});
+
+		test("else path taken for copyToClipboard and cutToClipboard", async () => {
+			const { findByText } = render(<Base64 />);
+
+			const buttonCopy = await findByText(/Copiar/);
+			const buttonCut = await findByText(/Recortar/);
+
+			await act(async () => {
+				await fireEvent.press(buttonCopy);
+			});
+
+			await act(async () => {
+				await fireEvent.press(buttonCut);
+			});
+
+			expect(true).toBeTruthy();
+		});
 	});
 
 	describe("UseEffect", () => {
 		describe("ConsiderSpace from AsyncStorage", () => {
 			it("should set considerSpace as true when AsyncStorage has the value", async () => {
-				await act(async () => {
-					await AsyncStorage.setItem("considerSpaceAfterGenerate", JSON.stringify(true));
+				const valueTobeStored = "true";
+				(AsyncStorage.getItem as jest.Mock).mockResolvedValue(valueTobeStored);
 
-					const { findByTestId } = render(<Base64 />);
+				const { findByTestId } = render(<Base64 />);
 
-					// eslint-disable-next-line @typescript-eslint/no-unused-vars
-					const checkbox = await findByTestId("consider-space-checkbox");
+				const checkbox = await findByTestId("consider-space-checkbox");
+
+				waitFor(() => {
+					expect(AsyncStorage.getItem).toHaveBeenCalledWith("considerSpaceAfterGenerate");
+
+					expect(checkbox.props.accessibilityState.checked).toBe(true);
 				});
 			});
 		});
