@@ -26,7 +26,7 @@
         "backgroundColor": "#02bcd4"
       },
       "package": "com.gabriellogan.Base64Oficial",
-      "versionCode": 6
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -36,7 +36,10 @@
         "expo-build-properties",
         {
           "android": {
-            "enableProguardInReleaseBuilds": true
+            "enablePngCrunchInReleaseBuilds": true,
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "networkInspector": false
           }
         }
       ],
