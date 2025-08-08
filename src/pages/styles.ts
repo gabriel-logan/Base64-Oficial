@@ -1,119 +1,129 @@
 import { StyleSheet } from "react-native";
-
 import { RFValue } from "../Responsive";
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: "#F4F6F8",
 		padding: RFValue(20),
-		justifyContent: "center",
-		alignItems: "center",
 	},
 	title: {
-		fontSize: RFValue(24),
+		fontSize: RFValue(26),
 		fontWeight: "bold",
+		color: "#333",
+		textAlign: "center",
 		marginBottom: RFValue(20),
+	},
+	sectionCard: {
+		backgroundColor: "#fff",
+		borderRadius: 12,
+		padding: RFValue(15),
+		marginBottom: RFValue(15),
+		shadowColor: "#000",
+		shadowOpacity: 0.05,
+		shadowOffset: { width: 0, height: 2 },
+		shadowRadius: 5,
+		elevation: 2,
 	},
 	buttonContainer: {
 		flexDirection: "row",
-		marginBottom: RFValue(20),
-	},
-	buttonContainerText: {
-		fontSize: RFValue(14),
+		justifyContent: "space-between",
 	},
 	button: {
 		flex: 1,
 		alignItems: "center",
-		padding: RFValue(10),
-		margin: RFValue(5),
-		backgroundColor: "#3498db",
-		borderRadius: 4,
+		padding: RFValue(12),
+		marginHorizontal: RFValue(5),
+		backgroundColor: "#4A90E2",
+		borderRadius: 8,
+		shadowColor: "#000",
+		shadowOpacity: 0.1,
+		shadowOffset: { width: 0, height: 2 },
+		shadowRadius: 3,
+		elevation: 2,
 	},
-	inputContainer: {
-		width: "100%",
-		marginBottom: RFValue(10),
+	buttonText: {
+		color: "#fff",
+		fontWeight: "600",
+		fontSize: RFValue(15),
 	},
 	input: {
 		borderWidth: 1,
-		borderColor: "#ccc",
-		borderRadius: 5,
-		padding: RFValue(10),
-		height: RFValue(230),
+		borderColor: "#ddd",
+		borderRadius: 8,
+		padding: RFValue(12),
+		height: RFValue(200),
 		textAlignVertical: "top",
-		backgroundColor: "#f8f8f8",
-		elevation: 1,
+		backgroundColor: "#FAFAFA",
 		fontSize: RFValue(16),
 	},
-	charCountContainer: {
-		marginBottom: RFValue(10),
-	},
-	charCountText: {
-		color: "gray",
+	charCount: {
+		marginTop: RFValue(8),
+		textAlign: "right",
+		fontSize: RFValue(13),
 	},
 	actionContainer: {
 		flexDirection: "row",
-		marginBottom: RFValue(20),
+		flexWrap: "wrap",
+		justifyContent: "space-between",
 	},
 	actionButton: {
 		alignItems: "center",
-		padding: RFValue(10),
+		paddingVertical: RFValue(10),
+		paddingHorizontal: RFValue(15),
 		margin: RFValue(5),
-		backgroundColor: "#27ae60",
-		width: RFValue(90),
-		borderRadius: 4,
+		backgroundColor: "#2ECC71",
+		borderRadius: 8,
+		elevation: 1,
+		minWidth: RFValue(80),
 	},
 	actionButtonText: {
-		fontSize: RFValue(13),
-	},
-	languageContainer: {
-		flex: 1,
-		top: RFValue(35),
-		alignSelf: "flex-end",
-	},
-	languageButton: {
-		backgroundColor: "#e74c3c",
-		padding: RFValue(10),
-		borderRadius: 4,
-	},
-	languageButtonText: {
 		fontSize: RFValue(14),
+		color: "#fff",
+		fontWeight: "600",
+	},
+	checkboxRow: {
+		flexDirection: "row",
+		alignItems: "center",
+	},
+	checkboxText: {
+		marginLeft: RFValue(8),
+		fontSize: RFValue(14),
+		color: "#555",
 	},
 	footer: {
-		flex: 1,
-		justifyContent: "flex-end",
-	},
-	helpContainer: {
-		flexDirection: "row",
-		justifyContent: "center",
 		alignItems: "center",
-		marginTop: RFValue(20),
+		marginTop: RFValue(15),
 	},
 	helpText: {
 		fontSize: RFValue(16),
 		fontWeight: "bold",
-		marginRight: RFValue(10),
+		marginBottom: RFValue(10),
 	},
 	coffeeButton: {
-		backgroundColor: "#FFA500", // Cor de laranja (você pode alterar para sua cor preferida)
-		padding: RFValue(10),
-		borderRadius: 5,
+		backgroundColor: "#F7B500",
+		paddingHorizontal: RFValue(15),
+		paddingVertical: RFValue(8),
+		borderRadius: 8,
 	},
 	coffeeButtonText: {
-		color: "white",
+		color: "#fff",
 		fontWeight: "bold",
 		fontSize: RFValue(14),
 	},
-	divCheckBox: {},
-	row: {
-		flexDirection: "row", // Define o layout em linha (row) para os elementos filhos
-		alignItems: "center", // Centraliza verticalmente os elementos dentro de cada linha
-		marginRight: RFValue(10), // Espaço entre as linhas (você pode ajustar conforme necessário)
-		marginTop: RFValue(5),
+	languageContainer: {
+		alignSelf: "flex-end",
+		marginBottom: RFValue(15),
 	},
-	text: {
-		marginRight: RFValue(5), // Espaço entre o texto e o Checkbox (você pode ajustar conforme necessário)
+	languageButton: {
+		backgroundColor: "#E74C3C",
+		paddingVertical: RFValue(8),
+		paddingHorizontal: RFValue(12),
+		borderRadius: 8,
+	},
+	languageButtonText: {
 		fontSize: RFValue(14),
+		color: "#fff",
+		fontWeight: "600",
 	},
 });
-
-export default styles;
