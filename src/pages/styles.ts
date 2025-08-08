@@ -5,7 +5,7 @@ export default StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#F4F6F8",
-		padding: RFValue(20),
+		padding: RFValue(15),
 	},
 	title: {
 		fontSize: RFValue(26),
@@ -33,7 +33,7 @@ export default StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		padding: RFValue(12),
-		marginHorizontal: RFValue(5),
+		marginHorizontal: RFValue(8),
 		backgroundColor: "#4A90E2",
 		borderRadius: 8,
 		shadowColor: "#000",
@@ -75,7 +75,7 @@ export default StyleSheet.create({
 		backgroundColor: "#2ECC71",
 		borderRadius: 8,
 		elevation: 1,
-		minWidth: RFValue(80),
+		minWidth: RFValue(90),
 	},
 	actionButtonText: {
 		fontSize: RFValue(14),
@@ -114,6 +114,7 @@ export default StyleSheet.create({
 	languageContainer: {
 		alignSelf: "flex-end",
 		marginBottom: RFValue(15),
+		marginTop: RFValue(10),
 	},
 	languageButton: {
 		backgroundColor: "#E74C3C",
