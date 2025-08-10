@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
@@ -46,7 +47,7 @@ export default function MainPage() {
   }
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       <ScrollView
         contentContainerStyle={styles.container}
         showsVerticalScrollIndicator={false}
@@ -77,10 +78,7 @@ export default function MainPage() {
 
         <View style={styles.rowWrap}>
           {["Cut", "Copy", "Paste", "Clear"].map((label, index) => (
-            <TouchableOpacity
-              key={index /** nosonar */}
-              style={styles.actionButton}
-            >
+            <TouchableOpacity key={index} style={styles.actionButton}>
               <Text style={styles.actionButtonText}>{label}</Text>
             </TouchableOpacity>
           ))}
@@ -92,18 +90,19 @@ export default function MainPage() {
         </View>
       </ScrollView>
 
+      {/* Footer com espaçamento seguro */}
       <View style={styles.supportBox}>
         <Text style={styles.supportText}>Help the developer:</Text>
         <TouchableOpacity
           style={styles.coffeeButton}
-          onPress={() => {
-            Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
-          }}
+          onPress={() =>
+            Linking.openURL("https://www.buymeacoffee.com/gabriellogan")
+          }
         >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -116,7 +115,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     alignItems: "center",
-    justifyContent: "center", // centraliza o conteúdo principal
+    justifyContent: "center",
   },
   title: {
     fontSize: 28,
@@ -197,7 +196,7 @@ const styles = StyleSheet.create({
   },
   supportBox: {
     alignItems: "center",
-    padding: 15,
+    paddingVertical: 8,
     borderTopWidth: 1,
     borderTopColor: "#ddd",
     backgroundColor: "#fff",
@@ -212,7 +211,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 8,
-    marginBottom: 16,
   },
   coffeeButtonText: {
     color: "#fff",
