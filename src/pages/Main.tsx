@@ -17,9 +17,21 @@ export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
 
-  function encodeToBase64() {}
+  function encodeToBase64() {
+    const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
-  function decodeFromBase64() {}
+    const encoded = btoa(spaceConsidered);
+
+    setInputText(encoded);
+  }
+
+  function decodeFromBase64() {
+    const textTrimmed = inputText.trim();
+
+    const decoded = atob(textTrimmed);
+
+    setInputText(decoded);
+  }
 
   async function copyToClipboard() {
     if (inputText) {
