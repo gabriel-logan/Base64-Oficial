@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react-native";
-import App from "../App";
+import MainPage from "../../src/pages/Main";
 
-describe("App", () => {
+describe("MainPage", () => {
   it("should render correctly", () => {
-    render(<App />);
+    render(<MainPage />);
   });
 });
