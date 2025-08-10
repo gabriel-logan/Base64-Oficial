@@ -28,6 +28,18 @@ describe("MainPage", () => {
     expect(Linking.openURL).toHaveBeenCalledTimes(1);
   });
 
+  it("should open URL when the contribute button is pressed", () => {
+    render(<MainPage />);
+
+    const btnContribute = screen.getByTestId(/contribute-button/i);
+
+    fireEvent.press(btnContribute);
+
+    expect(Linking.openURL).toHaveBeenCalledWith(
+      "https://github.com/gabriel-logan/Base64-Oficial",
+    );
+  });
+
   it("should convert text to Base64 when Encode button is pressed", () => {
     render(<MainPage />);
 

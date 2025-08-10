@@ -40,6 +40,14 @@
             "networkInspector": false
           }
         }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#02bcd4",
+          "image": "./assets/splash.png",
+          "resizeMode": "cover"
+        }
       ]
     ],
     "extra": {
