@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
   ScrollView,
+  Alert,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
@@ -28,9 +29,18 @@ export default function MainPage() {
   function decodeFromBase64() {
     const textTrimmed = inputText.trim();
 
-    const decoded = atob(textTrimmed);
+    if (!textTrimmed) {
+      Alert.alert("Error", "The entered text must not be empty");
+      return;
+    }
 
-    setInputText(decoded);
+    try {
+      const decoded = atob(textTrimmed);
+
+      setInputText(decoded);
+    } catch {
+      Alert.alert("Error", "Invalid Base64 string, please check your input.");
+    }
   }
 
   async function copyToClipboard() {
