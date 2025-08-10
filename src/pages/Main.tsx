@@ -134,9 +134,9 @@ export default function MainPage() {
         </View>
 
         <View style={styles.rowWrap}>
-          {(["Cut", "Copy", "Paste", "Clear"] as const).map((label, index) => (
+          {(["Cut", "Copy", "Paste", "Clear"] as const).map((label) => (
             <TouchableOpacity
-              key={index /** nosonar */}
+              key={label}
               style={styles.actionButton}
               onPress={actions[label]}
               accessibilityRole="button"
