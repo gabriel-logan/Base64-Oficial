@@ -61,6 +61,13 @@ export default function MainPage() {
     setInputText((prev) => prev + text);
   }
 
+  const actions = {
+    Cut: cutToClipboard,
+    Copy: copyToClipboard,
+    Paste: pasteFromClipboard,
+    Clear: () => setInputText(""),
+  };
+
   return (
     <SafeAreaView style={styles.screen}>
       <ScrollView
@@ -106,22 +113,7 @@ export default function MainPage() {
             <TouchableOpacity
               key={index /** nosonar */}
               style={styles.actionButton}
-              onPress={() => {
-                switch (label) {
-                  case "Cut":
-                    cutToClipboard();
-                    break;
-                  case "Copy":
-                    copyToClipboard();
-                    break;
-                  case "Paste":
-                    pasteFromClipboard();
-                    break;
-                  case "Clear":
-                    setInputText("");
-                    break;
-                }
-              }}
+              onPress={actions[label]}
             >
               <Text style={styles.actionButtonText}>{label}</Text>
             </TouchableOpacity>
