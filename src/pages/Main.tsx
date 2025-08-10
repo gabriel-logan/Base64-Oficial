@@ -13,7 +13,6 @@ import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
 // eslint-disable-next-line import/no-named-as-default
 import Checkbox from "expo-checkbox";
-import { decode, encode } from "../utils/base64";
 
 const maxInputTextLength = 25000;
 
@@ -36,7 +35,7 @@ export default function MainPage() {
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
     try {
-      const encoded = encode(spaceConsidered);
+      const encoded = btoa(spaceConsidered);
 
       handleChangeText(encoded);
     } catch {
@@ -53,7 +52,7 @@ export default function MainPage() {
     }
 
     try {
-      const decoded = decode(textTrimmed);
+      const decoded = atob(textTrimmed);
 
       handleChangeText(decoded);
     } catch {
