@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Base 64</title>
+<meta name="description" content="Tool for encoding and decoding Base64 strings" />
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F8F9FA;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    padding: 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .button {
+    flex: 1;
+    padding: 14px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+  .button.primary:hover {
+    background-color: #005BBB;
+  }
+  .button.secondary:hover {
+    background-color: #28A745;
+  }
+  .primary {
+    background-color: #007AFF;
+  }
+  .secondary {
+    background-color: #34C759;
+  }
+  .input-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 220px;
+    max-height: 300px;
+    font-size: 18px;
+    color: #333;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  .char-count {
+    font-size: 15px;
+    color: #777;
+    text-align: right;
+    margin-top: 8px;
+  }
+  .char-count.max {
+    color: #FF3B30;
+  }
+  .row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .action-button {
+    background-color: #E5E5EA;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+  .action-button:hover {
+    background-color: #ccc;
+  }
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  label {
+    font-size: 18px;
+    color: #333;
+    user-select: none;
+  }
+  input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: white;
+    border-top: 1px solid #ddd;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .support-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  .coffee-button {
+    background-color: #FF9500;
+    padding: 12px 26px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  .coffee-button:hover {
+    background-color: #cc7a00;
+  }
+
+  /* Responsividade */
+  @media (max-width: 700px) {
+    main {
+      padding: 20px 30px;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .row, .row-wrap {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .button, .action-button {
+      width: 100%;
+      flex: none;
+    }
+    textarea {
+      min-height: 160px;
+      max-height: 200px;
+      font-size: 16px;
+    }
+    .checkbox-row {
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    label {
+      font-size: 16px;
+    }
+    .support-text {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .coffee-button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Base 64</h1>
+
+    <div class="row">
+      <button class="button primary">Encode</button>
+      <button class="button secondary">Decode</button>
+    </div>
+
+    <div class="input-container">
+      <textarea placeholder="Enter or paste text here" maxlength="25000"></textarea>
+      <div class="char-count">0 / Characters</div>
+    </div>
+
+    <div class="row-wrap">
+      <button class="action-button">Cut</button>
+      <button class="action-button">Copy</button>
+      <button class="action-button">Paste</button>
+      <button class="action-button">Clear</button>
+    </div>
+
+    <div class="checkbox-row">
+      <label for="consider-space">Consider space</label>
+      <input type="checkbox" id="consider-space" />
+    </div>
+  </main>
+
+  <footer>
+    <div class="support-text">Help the developer:</div>
+    <a href="https://www.buymeacoffee.com/gabriellogan" target="_blank" class="coffee-button">☕ Buy me a coffee</a>
+  </footer>
+</body>
+</html>
