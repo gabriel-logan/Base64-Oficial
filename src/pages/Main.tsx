@@ -6,9 +6,45 @@ import {
   View,
   ScrollView,
 } from "react-native";
+import { useState } from "react";
+import * as Clipboard from "expo-clipboard";
+import * as Linking from "expo-linking";
 import Checkbox from "expo-checkbox";
 
 export default function MainPage() {
+  const [inputText, setInputText] = useState("");
+  const [considerSpace, setConsiderSpace] = useState(false);
+
+  function encodeToBase64(text: string) {
+    if (considerSpace) {
+      text = text.replace(/ /g, "_");
+    }
+
+    return Buffer.from(text).toString("base64");
+  }
+
+  function decodeFromBase64(encodedText: string) {
+    const decoded = Buffer.from(encodedText, "base64").toString("utf-8");
+
+    if (considerSpace) {
+      return decoded.replace(/_/g, " ");
+    }
+
+    return decoded;
+  }
+
+  function copyToClipboard(text: string) {
+    // Implement copy to clipboard functionality
+  }
+
+  function cutToClipboard(text: string) {
+    // Implement cut to clipboard functionality
+  }
+
+  function pasteFromClipboard() {
+    // Implement paste from clipboard functionality
+  }
+
   return (
     <View style={styles.screen}>
       <ScrollView
@@ -29,11 +65,14 @@ export default function MainPage() {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Enter text here"
+            placeholder="Enter or paste text here"
             placeholderTextColor="#aaa"
+            maxLength={25000}
+            value={inputText}
+            onChangeText={setInputText}
             multiline
           />
-          <Text style={styles.charCount}>0 Characters</Text>
+          <Text style={styles.charCount}>{inputText.length} Characters</Text>
         </View>
 
         <View style={styles.rowWrap}>
@@ -53,10 +92,14 @@ export default function MainPage() {
         </View>
       </ScrollView>
 
-      {/* Help fixo no final */}
       <View style={styles.supportBox}>
         <Text style={styles.supportText}>Help the developer:</Text>
-        <TouchableOpacity style={styles.coffeeButton}>
+        <TouchableOpacity
+          style={styles.coffeeButton}
+          onPress={() => {
+            Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
+          }}
+        >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
       </View>
@@ -113,7 +156,8 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   input: {
-    minHeight: 180, // mais alto
+    minHeight: 180,
+    maxHeight: 200,
     fontSize: 16,
     color: "#333",
     textAlignVertical: "top",
