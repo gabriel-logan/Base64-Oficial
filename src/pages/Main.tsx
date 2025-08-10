@@ -121,7 +121,12 @@ export default function MainPage() {
             onChangeText={handleChangeText}
             multiline
           />
-          <Text style={styles.charCount}>
+          <Text
+            style={[
+              styles.charCount,
+              inputText.length === maxInputTextLength && styles.charCountMax,
+            ]}
+          >
             {inputText.length === maxInputTextLength
               ? "Max"
               : `${inputText.length} / Characters`}
@@ -227,6 +232,9 @@ const styles = StyleSheet.create({
     color: "#777",
     fontSize: 14,
     marginTop: 5,
+  },
+  charCountMax: {
+    color: "#FF3B30",
   },
   rowWrap: {
     flexDirection: "row",
