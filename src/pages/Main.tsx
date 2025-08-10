@@ -152,6 +152,7 @@ export default function MainPage() {
             color="#007AFF"
             value={considerSpace}
             onValueChange={setConsiderSpace}
+            testID="consider-space-checkbox"
           />
         </View>
       </ScrollView>
