@@ -27,10 +27,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set build date in HTML
+      - name: Set build date in HTML (exact new Date())
         run: |
-          DATE=$(date +"%d %B %Y")
-          sed -i "s/Today's Date/$DATE/g" docs/index.html
+          DATE=$(node -e "console.log(new Date())")
+          sed -i "s|Today's Date|$DATE|g" docs/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
