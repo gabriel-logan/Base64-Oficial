@@ -90,7 +90,7 @@ export default function MainPage() {
         </View>
 
         <View style={styles.rowWrap}>
-          {["Cut", "Copy", "Paste", "Clear"].map((label, index) => (
+          {(["Cut", "Copy", "Paste", "Clear"] as const).map((label, index) => (
             <TouchableOpacity
               key={index /** nosonar */}
               style={styles.actionButton}
