@@ -43,7 +43,7 @@ export default function MainPage() {
     const textTrimmed = inputText.trim();
 
     if (!textTrimmed) {
-      Alert.alert("Error", "The entered text must not be empty");
+      Alert.alert("Error", "The entered text to decode must not be empty");
       return;
     }
 
