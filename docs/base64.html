@@ -271,6 +271,7 @@
   <script>
     const textArea = document.querySelector("textarea");
     const charCount = document.querySelector(".char-count");
+    const considerSpaceCheckbox = document.querySelector("#consider-space");
 
     // Atualiza contador de caracteres ao digitar
     textArea.addEventListener("input", () => {
@@ -281,7 +282,7 @@
 
     function encodeToBase64() {
       try {
-        const text = textArea.value;
+        const text = considerSpaceCheckbox.checked ? `${textArea.value}\n` : textArea.value;
         const encoded = btoa(text);
         textArea.value = encoded;
         updateCharCount();
