@@ -34,9 +34,13 @@ export default function MainPage() {
   function encodeToBase64() {
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
-    const encoded = btoa(spaceConsidered);
+    try {
+      const encoded = btoa(spaceConsidered);
 
-    handleChangeText(encoded);
+      handleChangeText(encoded);
+    } catch {
+      Alert.alert("Error", "Failed to encode text");
+    }
   }
 
   function decodeFromBase64() {
@@ -71,6 +75,7 @@ export default function MainPage() {
 
   async function pasteFromClipboard() {
     const text = await Clipboard.getStringAsync();
+
     handleChangeText(inputText + text);
   }
 
