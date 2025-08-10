@@ -14,9 +14,13 @@ import * as Linking from "expo-linking";
 // eslint-disable-next-line import/no-named-as-default
 import Checkbox from "expo-checkbox";
 
+const maxInputTextLength = 25000;
+
 export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
+
+  const inputTextLength = inputText.length;
 
   function encodeToBase64() {
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
@@ -98,15 +102,15 @@ export default function MainPage() {
             style={styles.input}
             placeholder="Enter or paste text here"
             placeholderTextColor="#aaa"
-            maxLength={25000}
+            maxLength={maxInputTextLength}
             value={inputText}
             onChangeText={setInputText}
             multiline
           />
           <Text style={styles.charCount}>
-            {inputText.length === 25000
+            {inputTextLength === maxInputTextLength
               ? "Max"
-              : `${inputText.length} / Characters`}
+              : `${inputTextLength} / Characters`}
           </Text>
         </View>
 
