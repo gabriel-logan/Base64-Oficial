@@ -5,7 +5,7 @@ import MainPage from "./src/pages/Main";
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
       <MainPage />
     </View>
   );
