@@ -11,7 +11,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "test": "jest --verbose",
     "test:cov": "jest --coverage",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "pr-check": "yarn format && yarn lint && yarn test"
   },
   "dependencies": {
     "expo": "~53.0.20",
