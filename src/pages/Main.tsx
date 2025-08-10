@@ -164,6 +164,7 @@ export default function MainPage() {
             Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
           }}
           accessibilityRole="button"
+          testID="help-developer-button"
         >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
