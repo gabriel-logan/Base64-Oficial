@@ -165,6 +165,17 @@ export default function MainPage() {
         >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.contributeButton}
+          onPress={() => {
+            Linking.openURL("https://github.com/gabriel-logan/Base64-Oficial");
+          }}
+          accessibilityRole="button"
+          testID="contribute-button"
+        >
+          <Text style={styles.contributeButtonText}>Contribute on GitHub</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -281,6 +292,14 @@ const styles = StyleSheet.create({
   },
   coffeeButtonText: {
     color: "#fff",
+    fontWeight: "600",
+    fontSize: 16,
+  },
+  contributeButton: {
+    marginTop: 12,
+  },
+  contributeButtonText: {
+    color: "#000",
     fontWeight: "600",
     fontSize: 16,
   },
