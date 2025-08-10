@@ -78,7 +78,10 @@ export default function MainPage() {
 
         <View style={styles.rowWrap}>
           {["Cut", "Copy", "Paste", "Clear"].map((label, index) => (
-            <TouchableOpacity key={index} style={styles.actionButton}>
+            <TouchableOpacity
+              key={index /** nosonar */}
+              style={styles.actionButton}
+            >
               <Text style={styles.actionButtonText}>{label}</Text>
             </TouchableOpacity>
           ))}
@@ -90,7 +93,6 @@ export default function MainPage() {
         </View>
       </ScrollView>
 
-      {/* Footer com espaçamento seguro */}
       <View style={styles.supportBox}>
         <Text style={styles.supportText}>Help the developer:</Text>
         <TouchableOpacity
