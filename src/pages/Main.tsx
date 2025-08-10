@@ -22,7 +22,18 @@ export default function MainPage() {
 
   const inputTextLength = inputText.length;
 
+  function verifyInputTextLength() {
+    if (inputTextLength > maxInputTextLength) {
+      return Alert.alert(
+        "Error",
+        `Text exceeds maximum length of ${maxInputTextLength} characters`,
+      );
+    }
+  }
+
   function encodeToBase64() {
+    verifyInputTextLength();
+
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
     const encoded = btoa(spaceConsidered);
@@ -31,6 +42,8 @@ export default function MainPage() {
   }
 
   function decodeFromBase64() {
+    verifyInputTextLength();
+
     const textTrimmed = inputText.trim();
 
     if (!textTrimmed) {
