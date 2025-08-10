@@ -237,30 +237,29 @@
 </head>
 
 <body>
-  <main>
-    <h1>Base 64</h1>
+  <h1>Base 64</h1>
 
-    <div class="row">
-      <button class="button primary" onclick="encodeToBase64()">Encode</button>
-      <button class="button secondary" onclick="decodeFromBase64()">Decode</button>
-    </div>
+  <div class="row">
+    <button class="button primary" onclick="encodeToBase64()">Encode</button>
+    <button class="button secondary" onclick="decodeFromBase64()">Decode</button>
+  </div>
 
-    <div class="input-container">
-      <textarea placeholder="Enter or paste text here" maxlength="25000"></textarea>
-      <div class="char-count">0 / Characters</div>
-    </div>
+  <div class="input-container">
+    <textarea placeholder="Enter or paste text here" maxlength="25000"></textarea>
+    <div class="char-count">0 / Characters</div>
+  </div>
 
-    <div class="row-wrap">
-      <button class="action-button" onclick="cutToClipboard()">Cut</button>
-      <button class="action-button" onclick="copyToClipboard()">Copy</button>
-      <button class="action-button" onclick="pasteFromClipboard()">Paste</button>
-      <button class="action-button" onclick="clearTextArea()">Clear</button>
-    </div>
+  <div class="row-wrap">
+    <button class="action-button" onclick="cutToClipboard()">Cut</button>
+    <button class="action-button" onclick="copyToClipboard()">Copy</button>
+    <button class="action-button" onclick="pasteFromClipboard()">Paste</button>
+    <button class="action-button" onclick="clearTextArea()">Clear</button>
+  </div>
 
-    <div class="checkbox-row">
-      <label for="consider-space">Consider space</label>
-      <input type="checkbox" id="consider-space" />
-    </div>
+  <div class="checkbox-row">
+    <label for="consider-space">Consider space</label>
+    <input type="checkbox" id="consider-space" />
+  </div>
   </main>
 
   <footer>
@@ -273,7 +272,6 @@
     const charCount = document.querySelector(".char-count");
     const considerSpaceCheckbox = document.querySelector("#consider-space");
 
-    // Atualiza contador de caracteres ao digitar
     textArea.addEventListener("input", () => {
       const length = textArea.value.length;
       charCount.textContent = `${length} / 25000 Characters`;
@@ -287,7 +285,7 @@
         textArea.value = encoded;
         updateCharCount();
       } catch {
-        alert("Erro ao codificar: texto pode conter caracteres inválidos para Base64.");
+        alert("Error encoding: text may contain invalid characters for Base64.");
       }
     }
 
@@ -298,16 +296,16 @@
         textArea.value = decoded;
         updateCharCount();
       } catch {
-        alert("Erro ao decodificar: texto não é um Base64 válido.");
+        alert("Error decoding: text is not valid Base64.");
       }
     }
 
     function copyToClipboard() {
       const text = textArea.value;
       navigator.clipboard.writeText(text).then(() => {
-        alert("Texto copiado para a área de transferência.");
+        alert("Text copied to clipboard.");
       }).catch(() => {
-        alert("Falha ao copiar o texto.");
+        alert("Failed to copy text.");
       });
     }
 
@@ -322,7 +320,7 @@
         textArea.value += clipText;
         updateCharCount();
       }).catch(() => {
-        alert("Falha ao acessar a área de transferência.");
+        alert("Failed to access clipboard.");
       });
     }
 
@@ -337,7 +335,6 @@
       charCount.classList.toggle("max", length >= 25000);
     }
 
-    // Inicializa contador na carga da página
     updateCharCount();
   </script>
 </body>
