@@ -25,8 +25,9 @@
     main {
       flex: 1;
       padding: 40px 60px;
-      max-width: 900px;
-      margin: 0 auto;
+      min-width: 700px;
+      max-width: 1366px;
+      margin: 10px auto;
       display: flex;
       flex-direction: column;
       align-items: stretch;
@@ -187,7 +188,7 @@
     /* Responsividade */
     @media (max-width: 700px) {
       main {
-        padding: 20px 30px;
+        padding: 20px 20px;
         max-width: 100%;
       }
 
@@ -237,29 +238,31 @@
 </head>
 
 <body>
-  <h1>Base 64</h1>
 
-  <div class="row">
-    <button class="button primary" onclick="encodeToBase64()">Encode</button>
-    <button class="button secondary" onclick="decodeFromBase64()">Decode</button>
-  </div>
+  <main>
+    <h1>Base 64</h1>
 
-  <div class="input-container">
-    <textarea placeholder="Enter or paste text here" maxlength="25000"></textarea>
-    <div class="char-count">0 / Characters</div>
-  </div>
+    <div class="row">
+      <button class="button primary" onclick="encodeToBase64()">Encode</button>
+      <button class="button secondary" onclick="decodeFromBase64()">Decode</button>
+    </div>
 
-  <div class="row-wrap">
-    <button class="action-button" onclick="cutToClipboard()">Cut</button>
-    <button class="action-button" onclick="copyToClipboard()">Copy</button>
-    <button class="action-button" onclick="pasteFromClipboard()">Paste</button>
-    <button class="action-button" onclick="clearTextArea()">Clear</button>
-  </div>
+    <div class="input-container">
+      <textarea placeholder="Enter or paste text here" maxlength="25000"></textarea>
+      <div class="char-count">0 Characters</div>
+    </div>
 
-  <div class="checkbox-row">
-    <label for="consider-space">Consider space</label>
-    <input type="checkbox" id="consider-space" />
-  </div>
+    <div class="row-wrap">
+      <button class="action-button" onclick="cutToClipboard()">Cut</button>
+      <button class="action-button" onclick="copyToClipboard()">Copy</button>
+      <button class="action-button" onclick="pasteFromClipboard()">Paste</button>
+      <button class="action-button" onclick="clearTextArea()">Clear</button>
+    </div>
+
+    <div class="checkbox-row">
+      <label for="consider-space">Consider space</label>
+      <input type="checkbox" id="consider-space" />
+    </div>
   </main>
 
   <footer>
@@ -274,8 +277,8 @@
 
     textArea.addEventListener("input", () => {
       const length = textArea.value.length;
-      charCount.textContent = `${length} / 25000 Characters`;
-      charCount.classList.toggle("max", length >= 25000);
+      charCount.textContent = `${length} Characters`;
+      // charCount.classList.toggle("max", length >= 25000)
     });
 
     function encodeToBase64() {
@@ -331,7 +334,7 @@
 
     function updateCharCount() {
       const length = textArea.value.length;
-      charCount.textContent = `${length} / 25000 Characters`;
+      charCount.textContent = `${length} Characters`;
       charCount.classList.toggle("max", length >= 25000);
     }
 
