@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
   },
   supportBox: {
     alignItems: "center",
-    paddingVertical: 8,
+    paddingVertical: 12,
     borderTopWidth: 1,
     borderTopColor: "#ddd",
     backgroundColor: "#fff",
