@@ -42,8 +42,7 @@
             "networkInspector": false
           }
         }
-      ],
-      "expo-localization"
+      ]
     ],
     "extra": {
       "eas": {
