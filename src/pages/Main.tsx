@@ -80,12 +80,14 @@ export default function MainPage() {
           <TouchableOpacity
             style={[styles.button, styles.primary]}
             onPress={encodeToBase64}
+            accessibilityRole="button"
           >
             <Text style={styles.buttonText}>Encode</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button, styles.secondary]}
             onPress={decodeFromBase64}
+            accessibilityRole="button"
           >
             <Text style={styles.buttonText}>Decode</Text>
           </TouchableOpacity>
@@ -114,6 +116,7 @@ export default function MainPage() {
               key={index /** nosonar */}
               style={styles.actionButton}
               onPress={actions[label]}
+              accessibilityRole="button"
             >
               <Text style={styles.actionButtonText}>{label}</Text>
             </TouchableOpacity>
@@ -137,6 +140,7 @@ export default function MainPage() {
           onPress={() => {
             Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
           }}
+          accessibilityRole="button"
         >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
