@@ -3011,6 +3011,9 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.4"
     expo: "npm:~53.0.20"
     expo-build-properties: "npm:~0.14.8"
+    expo-checkbox: "npm:~4.1.4"
+    expo-clipboard: "npm:~7.1.5"
+    expo-linking: "npm:~7.1.7"
     expo-status-bar: "npm:~2.2.3"
     prettier: "npm:^3.6.2"
     react: "npm:19.0.0"
@@ -4312,6 +4315,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-checkbox@npm:~4.1.4":
+  version: 4.1.4
+  resolution: "expo-checkbox@npm:4.1.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native-web:
+      optional: true
+  checksum: 10c0/cb7a04404c175a685ef6ff5c8e62ef4b9210f3f2479033a2d61a5cd3c940598ee5baec0a639f4c6839fc2f1382e3f0bd7b9fd5636c276b444c39678407db9a46
+  languageName: node
+  linkType: hard
+
+"expo-clipboard@npm:~7.1.5":
+  version: 7.1.5
+  resolution: "expo-clipboard@npm:7.1.5"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/44288d70ab84d687c63261eca294f2decc9eb18172d3dadbdbbfd5aa7d814acfb83c9e9e54e0399ea3052ef90a1312564bd79288a411429a2aeb830fffb5f998
+  languageName: node
+  linkType: hard
+
 "expo-constants@npm:~17.1.7":
   version: 17.1.7
   resolution: "expo-constants@npm:17.1.7"
@@ -4354,6 +4382,19 @@ __metadata:
     expo: "*"
     react: "*"
   checksum: 10c0/9d1993f7b17e6c36d707501ba9d983fe7e640317af7f2ecee17255f2c8c7bae39bdb3dfffcc67afcd36457bb60a6799dbaa2414922507ef01298cbe34e8eae8e
+  languageName: node
+  linkType: hard
+
+"expo-linking@npm:~7.1.7":
+  version: 7.1.7
+  resolution: "expo-linking@npm:7.1.7"
+  dependencies:
+    expo-constants: "npm:~17.1.7"
+    invariant: "npm:^2.2.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/4b4ec130d768beb4cecf85a33578e3eca1a69428a212ab7470ea1b1b7ff370607576832efbd7c3b5c047fb6d034a577aced42fd588cbeb46782e22ce2851542e
   languageName: node
   linkType: hard
 
