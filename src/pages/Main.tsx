@@ -17,24 +17,9 @@ export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
 
-  function encodeToBase64() {
-    const spaceConsidered = considerSpace
-      ? inputText.replace(/ /g, "_")
-      : inputText;
+  function encodeToBase64() {}
 
-    const encoded = Buffer.from(spaceConsidered).toString("base64");
-
-    setInputText(encoded);
-  }
-
-  function decodeFromBase64() {
-    try {
-      const decoded = Buffer.from(inputText, "base64").toString("utf-8");
-      setInputText(decoded);
-    } catch (error) {
-      console.error("Error decoding Base64:", error);
-    }
-  }
+  function decodeFromBase64() {}
 
   async function copyToClipboard() {
     if (inputText) {
@@ -87,7 +72,11 @@ export default function MainPage() {
             onChangeText={setInputText}
             multiline
           />
-          <Text style={styles.charCount}>{inputText.length} Characters</Text>
+          <Text style={styles.charCount}>
+            {inputText.length === 25000
+              ? "Max"
+              : `${inputText.length} / Characters`}
+          </Text>
         </View>
 
         <View style={styles.rowWrap}>
@@ -120,8 +109,8 @@ export default function MainPage() {
         <View style={styles.checkboxRow}>
           <Text style={styles.checkboxLabel}>Consider space</Text>
           <Checkbox
-            value={considerSpace}
             color="#007AFF"
+            value={considerSpace}
             onValueChange={setConsiderSpace}
           />
         </View>
@@ -131,9 +120,9 @@ export default function MainPage() {
         <Text style={styles.supportText}>Help the developer:</Text>
         <TouchableOpacity
           style={styles.coffeeButton}
-          onPress={() =>
-            Linking.openURL("https://www.buymeacoffee.com/gabriellogan")
-          }
+          onPress={() => {
+            Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
+          }}
         >
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
