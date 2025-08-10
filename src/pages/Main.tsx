@@ -20,30 +20,26 @@ export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
 
-  const inputTextLength = inputText.length;
-
-  function verifyInputTextLength() {
-    if (inputTextLength > maxInputTextLength) {
+  function handleChangeText(text: string) {
+    if (text.length > maxInputTextLength) {
       return Alert.alert(
         "Error",
         `Text exceeds maximum length of ${maxInputTextLength} characters`,
       );
     }
+
+    setInputText(text);
   }
 
   function encodeToBase64() {
-    verifyInputTextLength();
-
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
     const encoded = btoa(spaceConsidered);
 
-    setInputText(encoded);
+    handleChangeText(encoded);
   }
 
   function decodeFromBase64() {
-    verifyInputTextLength();
-
     const textTrimmed = inputText.trim();
 
     if (!textTrimmed) {
@@ -54,7 +50,7 @@ export default function MainPage() {
     try {
       const decoded = atob(textTrimmed);
 
-      setInputText(decoded);
+      handleChangeText(decoded);
     } catch {
       Alert.alert("Error", "Invalid Base64 string, please check your input.");
     }
@@ -75,7 +71,7 @@ export default function MainPage() {
 
   async function pasteFromClipboard() {
     const text = await Clipboard.getStringAsync();
-    setInputText((prev) => prev + text);
+    handleChangeText(inputText + text);
   }
 
   const actions = {
@@ -117,13 +113,13 @@ export default function MainPage() {
             placeholderTextColor="#aaa"
             maxLength={maxInputTextLength}
             value={inputText}
-            onChangeText={setInputText}
+            onChangeText={handleChangeText}
             multiline
           />
           <Text style={styles.charCount}>
-            {inputTextLength === maxInputTextLength
+            {inputText.length === maxInputTextLength
               ? "Max"
-              : `${inputTextLength} / Characters`}
+              : `${inputText.length} / Characters`}
           </Text>
         </View>
 
