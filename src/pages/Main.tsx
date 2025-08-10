@@ -10,6 +10,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
+// eslint-disable-next-line import/no-named-as-default
 import Checkbox from "expo-checkbox";
 
 export default function MainPage() {
