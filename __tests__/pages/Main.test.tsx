@@ -1,11 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react-native";
+import { act, fireEvent, render, screen } from "@testing-library/react-native";
 import MainPage from "../../src/pages/Main";
 import { Alert, Linking } from "react-native";
 import * as Clipboard from "expo-clipboard";
 
 describe("MainPage", () => {
-  it("should render correctly", () => {
-    render(<MainPage />);
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
   it("should handle change text input correctly", () => {
@@ -74,6 +74,27 @@ describe("MainPage", () => {
   });
 
   describe("Cut, Copy, Paste, Clear", () => {
+    it("should cut text when Cut button is pressed", async () => {
+      const clipboardSpy = jest.spyOn(Clipboard, "setStringAsync");
+
+      render(<MainPage />);
+
+      const textInput = screen.getByPlaceholderText(
+        /Enter or paste text here/i,
+      );
+
+      fireEvent.changeText(textInput, "Hello World");
+
+      const btnCut = screen.getByText(/cut/i);
+
+      await act(async () => {
+        fireEvent.press(btnCut);
+      });
+
+      expect(clipboardSpy).toHaveBeenCalledWith("Hello World");
+      expect(textInput.props.value).toBe("");
+    });
+
     it("should copy text to clipboard when Copy button is pressed", () => {
       const clipboardSpy = jest.spyOn(Clipboard, "setStringAsync");
 
@@ -92,8 +113,10 @@ describe("MainPage", () => {
       expect(clipboardSpy).toHaveBeenCalledWith("Hello World");
     });
 
-    it("should cut text when Cut button is pressed", () => {
-      const clipboardSpy = jest.spyOn(Clipboard, "setStringAsync");
+    it("should paste text from clipboard when Paste button is pressed", async () => {
+      const clipboardSpy = jest
+        .spyOn(Clipboard, "getStringAsync")
+        .mockResolvedValue("Hello World");
 
       render(<MainPage />);
 
@@ -101,14 +124,14 @@ describe("MainPage", () => {
         /Enter or paste text here/i,
       );
 
-      fireEvent.changeText(textInput, "Hello World");
+      const btnPaste = screen.getByText(/paste/i);
 
-      const btnCut = screen.getByText(/cut/i);
+      await act(async () => {
+        fireEvent.press(btnPaste);
+      });
 
-      fireEvent.press(btnCut);
-
-      expect(clipboardSpy).toHaveBeenCalledWith("Hello World");
-      expect(textInput.props.value).toBe("");
+      expect(textInput.props.value).toBe("Hello World");
+      expect(clipboardSpy).toHaveBeenCalled();
     });
 
     it("should clear text input when clear button is pressed", () => {
@@ -125,6 +148,38 @@ describe("MainPage", () => {
       fireEvent.press(btnClear);
 
       expect(textInput.props.value).toBe("");
+    });
+
+    it("should do nothing if inputText is empty", async () => {
+      render(<MainPage />);
+
+      const textInput = screen.getByPlaceholderText(
+        /Enter or paste text here/i,
+      );
+
+      const btnCopy = screen.getByText(/copy/i);
+
+      await act(async () => {
+        fireEvent.press(btnCopy);
+      });
+
+      expect(textInput.props.value).toBe("");
+
+      const btnCut = screen.getByText(/cut/i);
+
+      await act(async () => {
+        fireEvent.press(btnCut);
+      });
+
+      expect(textInput.props.value).toBe("");
+
+      const btnPaste = screen.getByText(/paste/i);
+
+      await act(async () => {
+        fireEvent.press(btnPaste);
+      });
+
+      expect(textInput.props.value).toBe("Hello World");
     });
   });
 

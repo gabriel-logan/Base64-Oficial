@@ -34,13 +34,9 @@ export default function MainPage() {
   function encodeToBase64() {
     const spaceConsidered = considerSpace ? `${inputText}\n` : inputText;
 
-    try {
-      const encoded = btoa(spaceConsidered);
+    const encoded = btoa(spaceConsidered);
 
-      handleChangeText(encoded);
-    } catch {
-      Alert.alert("Error", "Failed to encode text");
-    }
+    handleChangeText(encoded);
   }
 
   function decodeFromBase64() {
