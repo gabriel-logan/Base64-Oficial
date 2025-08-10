@@ -10,67 +10,76 @@ import Checkbox from "expo-checkbox";
 
 export default function MainPage() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Base 64</Text>
+    <View style={styles.screen}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
+      >
+        <Text style={styles.title}>Base 64</Text>
 
-      <View style={styles.row}>
-        <TouchableOpacity style={[styles.button, styles.primary]}>
-          <Text style={styles.buttonText}>Encode</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.secondary]}>
-          <Text style={styles.buttonText}>Decode</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter text here"
-          placeholderTextColor="#aaa"
-          multiline
-        />
-        <Text style={styles.charCount}>0 Characters</Text>
-      </View>
-
-      <View style={styles.rowWrap}>
-        {["Cut", "Copy", "Paste", "Clear"].map((label, index) => (
-          <TouchableOpacity
-            key={index /** nosonar */}
-            style={styles.actionButton}
-          >
-            <Text style={styles.actionButtonText}>{label}</Text>
+        <View style={styles.row}>
+          <TouchableOpacity style={[styles.button, styles.primary]}>
+            <Text style={styles.buttonText}>Encode</Text>
           </TouchableOpacity>
-        ))}
-      </View>
+          <TouchableOpacity style={[styles.button, styles.secondary]}>
+            <Text style={styles.buttonText}>Decode</Text>
+          </TouchableOpacity>
+        </View>
 
-      <View style={styles.checkboxRow}>
-        <Text style={styles.checkboxLabel}>Consider space</Text>
-        <Checkbox value={false} color="#007AFF" />
-      </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter text here"
+            placeholderTextColor="#aaa"
+            multiline
+          />
+          <Text style={styles.charCount}>0 Characters</Text>
+        </View>
 
+        <View style={styles.rowWrap}>
+          {["Cut", "Copy", "Paste", "Clear"].map((label, index) => (
+            <TouchableOpacity
+              key={index /** nosonar */}
+              style={styles.actionButton}
+            >
+              <Text style={styles.actionButtonText}>{label}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        <View style={styles.checkboxRow}>
+          <Text style={styles.checkboxLabel}>Consider space</Text>
+          <Checkbox value={false} color="#007AFF" />
+        </View>
+      </ScrollView>
+
+      {/* Help fixo no final */}
       <View style={styles.supportBox}>
         <Text style={styles.supportText}>Help the developer:</Text>
         <TouchableOpacity style={styles.coffeeButton}>
           <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: "#F8F9FA",
+  },
   container: {
     flexGrow: 1,
     padding: 20,
-    backgroundColor: "#F8F9FA",
     alignItems: "center",
+    justifyContent: "center", // centraliza o conteúdo principal
   },
   title: {
     fontSize: 28,
     fontWeight: "700",
     color: "#222",
     marginBottom: 20,
-    marginTop: 40,
   },
   row: {
     flexDirection: "row",
@@ -104,7 +113,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   input: {
-    minHeight: 100,
+    minHeight: 180, // mais alto
     fontSize: 16,
     color: "#333",
     textAlignVertical: "top",
@@ -144,7 +153,10 @@ const styles = StyleSheet.create({
   },
   supportBox: {
     alignItems: "center",
-    marginTop: "auto",
+    padding: 15,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    backgroundColor: "#fff",
   },
   supportText: {
     fontSize: 16,
@@ -156,6 +168,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 8,
+    marginBottom: 16,
   },
   coffeeButtonText: {
     color: "#fff",
