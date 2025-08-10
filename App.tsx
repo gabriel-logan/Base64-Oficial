@@ -1,14 +1,22 @@
-import Base64 from "./src/pages/Base64";
-
-import "./src/utils/translations/i18n";
-
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-	return (
-		<>
-			<Base64 />
-			<StatusBar backgroundColor="black" style={"light"} />
-		</>
-	);
+  const cu = 1
+
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
