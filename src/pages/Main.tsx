@@ -16,34 +16,41 @@ export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
 
-  function encodeToBase64(text: string) {
-    if (considerSpace) {
-      text = text.replace(/ /g, "_");
+  function encodeToBase64() {
+    const spaceConsidered = considerSpace
+      ? inputText.replace(/ /g, "_")
+      : inputText;
+
+    const encoded = Buffer.from(spaceConsidered).toString("base64");
+
+    setInputText(encoded);
+  }
+
+  function decodeFromBase64() {
+    try {
+      const decoded = Buffer.from(inputText, "base64").toString("utf-8");
+      setInputText(decoded);
+    } catch (error) {
+      console.error("Error decoding Base64:", error);
     }
-
-    return Buffer.from(text).toString("base64");
   }
 
-  function decodeFromBase64(encodedText: string) {
-    const decoded = Buffer.from(encodedText, "base64").toString("utf-8");
-
-    if (considerSpace) {
-      return decoded.replace(/_/g, " ");
+  async function copyToClipboard() {
+    if (inputText) {
+      await Clipboard.setStringAsync(inputText);
     }
-
-    return decoded;
   }
 
-  function copyToClipboard(text: string) {
-    // Implement copy to clipboard functionality
+  async function cutToClipboard() {
+    if (inputText) {
+      await copyToClipboard();
+      setInputText("");
+    }
   }
 
-  function cutToClipboard(text: string) {
-    // Implement cut to clipboard functionality
-  }
-
-  function pasteFromClipboard() {
-    // Implement paste from clipboard functionality
+  async function pasteFromClipboard() {
+    const text = await Clipboard.getStringAsync();
+    setInputText((prev) => prev + text);
   }
 
   return (
@@ -55,10 +62,16 @@ export default function MainPage() {
         <Text style={styles.title}>Base 64</Text>
 
         <View style={styles.row}>
-          <TouchableOpacity style={[styles.button, styles.primary]}>
+          <TouchableOpacity
+            style={[styles.button, styles.primary]}
+            onPress={encodeToBase64}
+          >
             <Text style={styles.buttonText}>Encode</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.secondary]}>
+          <TouchableOpacity
+            style={[styles.button, styles.secondary]}
+            onPress={decodeFromBase64}
+          >
             <Text style={styles.buttonText}>Decode</Text>
           </TouchableOpacity>
         </View>
@@ -81,6 +94,22 @@ export default function MainPage() {
             <TouchableOpacity
               key={index /** nosonar */}
               style={styles.actionButton}
+              onPress={() => {
+                switch (label) {
+                  case "Cut":
+                    cutToClipboard();
+                    break;
+                  case "Copy":
+                    copyToClipboard();
+                    break;
+                  case "Paste":
+                    pasteFromClipboard();
+                    break;
+                  case "Clear":
+                    setInputText("");
+                    break;
+                }
+              }}
             >
               <Text style={styles.actionButtonText}>{label}</Text>
             </TouchableOpacity>
@@ -89,7 +118,11 @@ export default function MainPage() {
 
         <View style={styles.checkboxRow}>
           <Text style={styles.checkboxLabel}>Consider space</Text>
-          <Checkbox value={false} color="#007AFF" />
+          <Checkbox
+            value={considerSpace}
+            color="#007AFF"
+            onValueChange={setConsiderSpace}
+          />
         </View>
       </ScrollView>
 
