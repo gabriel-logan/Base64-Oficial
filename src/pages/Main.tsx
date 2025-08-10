@@ -6,9 +6,10 @@ import {
   View,
   ScrollView,
   Alert,
+  Keyboard,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
 // eslint-disable-next-line import/no-named-as-default
@@ -19,6 +20,7 @@ const maxInputTextLength = 25000;
 export default function MainPage() {
   const [inputText, setInputText] = useState("");
   const [considerSpace, setConsiderSpace] = useState(false);
+  const [keyboardVisible, setKeyboardVisible] = useState(false);
 
   function handleChangeText(text: string) {
     if (text.length > maxInputTextLength) {
@@ -81,6 +83,27 @@ export default function MainPage() {
     Paste: pasteFromClipboard,
     Clear: () => setInputText(""),
   };
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      "keyboardDidShow",
+      () => {
+        setKeyboardVisible(true);
+      },
+    );
+
+    const keyboardDidHideListener = Keyboard.addListener(
+      "keyboardDidHide",
+      () => {
+        setKeyboardVisible(false);
+      },
+    );
+
+    return () => {
+      keyboardDidShowListener.remove();
+      keyboardDidHideListener.remove();
+    };
+  }, []);
 
   return (
     <SafeAreaView style={styles.screen}>
@@ -153,30 +176,36 @@ export default function MainPage() {
         </View>
       </ScrollView>
 
-      <View style={styles.supportBox}>
-        <Text style={styles.supportText}>Help the developer:</Text>
-        <TouchableOpacity
-          style={styles.coffeeButton}
-          onPress={() => {
-            Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
-          }}
-          accessibilityRole="button"
-          testID="help-developer-button"
-        >
-          <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
-        </TouchableOpacity>
+      {!keyboardVisible && (
+        <View style={styles.supportBox}>
+          <Text style={styles.supportText}>Help the developer:</Text>
+          <TouchableOpacity
+            style={styles.coffeeButton}
+            onPress={() => {
+              Linking.openURL("https://www.buymeacoffee.com/gabriellogan");
+            }}
+            accessibilityRole="button"
+            testID="help-developer-button"
+          >
+            <Text style={styles.coffeeButtonText}>☕ Buy me a coffee</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.contributeButton}
-          onPress={() => {
-            Linking.openURL("https://github.com/gabriel-logan/Base64-Oficial");
-          }}
-          accessibilityRole="button"
-          testID="contribute-button"
-        >
-          <Text style={styles.contributeButtonText}>Contribute on GitHub</Text>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity
+            style={styles.contributeButton}
+            onPress={() => {
+              Linking.openURL(
+                "https://github.com/gabriel-logan/Base64-Oficial",
+              );
+            }}
+            accessibilityRole="button"
+            testID="contribute-button"
+          >
+            <Text style={styles.contributeButtonText}>
+              Contribute on GitHub
+            </Text>
+          </TouchableOpacity>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
