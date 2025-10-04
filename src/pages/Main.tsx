@@ -7,7 +7,6 @@ import {
   ScrollView,
   Alert,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 import * as Clipboard from "expo-clipboard";
 // eslint-disable-next-line import/no-named-as-default
@@ -82,84 +81,80 @@ export default function MainPage() {
   };
 
   return (
-    <SafeAreaView style={styles.screen}>
-      <ScrollView
-        contentContainerStyle={styles.container}
-        showsVerticalScrollIndicator={false}
-      >
-        <Text style={styles.title}>Base 64</Text>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      showsVerticalScrollIndicator={false}
+      contentInsetAdjustmentBehavior="automatic"
+      keyboardShouldPersistTaps="handled"
+    >
+      <Text style={styles.title}>Base 64</Text>
 
-        <View style={styles.row}>
+      <View style={styles.row}>
+        <TouchableOpacity
+          style={[styles.button, styles.primary]}
+          onPress={encodeToBase64}
+          accessibilityRole="button"
+        >
+          <Text style={styles.buttonText}>Encode</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, styles.secondary]}
+          onPress={decodeFromBase64}
+          accessibilityRole="button"
+        >
+          <Text style={styles.buttonText}>Decode</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter or paste text here"
+          placeholderTextColor="#aaa"
+          maxLength={maxInputTextLength}
+          value={inputText}
+          onChangeText={handleChangeText}
+          multiline
+        />
+        <Text
+          style={[
+            styles.charCount,
+            inputText.length === maxInputTextLength && styles.charCountMax,
+          ]}
+        >
+          {inputText.length === maxInputTextLength
+            ? "Max"
+            : `${inputText.length} / Characters`}
+        </Text>
+      </View>
+
+      <View style={styles.rowWrap}>
+        {(["Cut", "Copy", "Paste", "Clear"] as const).map((label) => (
           <TouchableOpacity
-            style={[styles.button, styles.primary]}
-            onPress={encodeToBase64}
+            key={label}
+            style={styles.actionButton}
+            onPress={actions[label]}
             accessibilityRole="button"
           >
-            <Text style={styles.buttonText}>Encode</Text>
+            <Text style={styles.actionButtonText}>{label}</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.button, styles.secondary]}
-            onPress={decodeFromBase64}
-            accessibilityRole="button"
-          >
-            <Text style={styles.buttonText}>Decode</Text>
-          </TouchableOpacity>
-        </View>
+        ))}
+      </View>
 
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter or paste text here"
-            placeholderTextColor="#aaa"
-            maxLength={maxInputTextLength}
-            value={inputText}
-            onChangeText={handleChangeText}
-            multiline
-          />
-          <Text
-            style={[
-              styles.charCount,
-              inputText.length === maxInputTextLength && styles.charCountMax,
-            ]}
-          >
-            {inputText.length === maxInputTextLength
-              ? "Max"
-              : `${inputText.length} / Characters`}
-          </Text>
-        </View>
-
-        <View style={styles.rowWrap}>
-          {(["Cut", "Copy", "Paste", "Clear"] as const).map((label) => (
-            <TouchableOpacity
-              key={label}
-              style={styles.actionButton}
-              onPress={actions[label]}
-              accessibilityRole="button"
-            >
-              <Text style={styles.actionButtonText}>{label}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-
-        <View style={styles.checkboxRow}>
-          <Text style={styles.checkboxLabel}>Consider space</Text>
-          <Checkbox
-            color="#007AFF"
-            value={considerSpace}
-            onValueChange={setConsiderSpace}
-            testID="consider-space-checkbox"
-          />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+      <View style={styles.checkboxRow}>
+        <Text style={styles.checkboxLabel}>Consider space</Text>
+        <Checkbox
+          color="#007AFF"
+          value={considerSpace}
+          onValueChange={setConsiderSpace}
+          testID="consider-space-checkbox"
+        />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: "#F8F9FA",
-  },
   container: {
     flexGrow: 1,
     padding: 20,
