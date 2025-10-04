@@ -6,6 +6,8 @@ import {
   View,
   ScrollView,
   Alert,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { useState } from "react";
 import * as Clipboard from "expo-clipboard";
@@ -81,76 +83,84 @@ export default function MainPage() {
   };
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.container}
-      showsVerticalScrollIndicator={false}
-      contentInsetAdjustmentBehavior="automatic"
-      keyboardShouldPersistTaps="handled"
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      keyboardVerticalOffset={0}
     >
-      <Text style={styles.title}>Base 64</Text>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
+        contentInsetAdjustmentBehavior="automatic"
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode={Platform.OS === "ios" ? "interactive" : "on-drag"}
+        automaticallyAdjustKeyboardInsets
+      >
+        <Text style={styles.title}>Base 64</Text>
 
-      <View style={styles.row}>
-        <TouchableOpacity
-          style={[styles.button, styles.primary]}
-          onPress={encodeToBase64}
-          accessibilityRole="button"
-        >
-          <Text style={styles.buttonText}>Encode</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.button, styles.secondary]}
-          onPress={decodeFromBase64}
-          accessibilityRole="button"
-        >
-          <Text style={styles.buttonText}>Decode</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter or paste text here"
-          placeholderTextColor="#aaa"
-          maxLength={maxInputTextLength}
-          value={inputText}
-          onChangeText={handleChangeText}
-          multiline
-        />
-        <Text
-          style={[
-            styles.charCount,
-            inputText.length === maxInputTextLength && styles.charCountMax,
-          ]}
-        >
-          {inputText.length === maxInputTextLength
-            ? "Max"
-            : `${inputText.length} / Characters`}
-        </Text>
-      </View>
-
-      <View style={styles.rowWrap}>
-        {(["Cut", "Copy", "Paste", "Clear"] as const).map((label) => (
+        <View style={styles.row}>
           <TouchableOpacity
-            key={label}
-            style={styles.actionButton}
-            onPress={actions[label]}
+            style={[styles.button, styles.primary]}
+            onPress={encodeToBase64}
             accessibilityRole="button"
           >
-            <Text style={styles.actionButtonText}>{label}</Text>
+            <Text style={styles.buttonText}>Encode</Text>
           </TouchableOpacity>
-        ))}
-      </View>
+          <TouchableOpacity
+            style={[styles.button, styles.secondary]}
+            onPress={decodeFromBase64}
+            accessibilityRole="button"
+          >
+            <Text style={styles.buttonText}>Decode</Text>
+          </TouchableOpacity>
+        </View>
 
-      <View style={styles.checkboxRow}>
-        <Text style={styles.checkboxLabel}>Consider space</Text>
-        <Checkbox
-          color="#007AFF"
-          value={considerSpace}
-          onValueChange={setConsiderSpace}
-          testID="consider-space-checkbox"
-        />
-      </View>
-    </ScrollView>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter or paste text here"
+            placeholderTextColor="#aaa"
+            maxLength={maxInputTextLength}
+            value={inputText}
+            onChangeText={handleChangeText}
+            multiline
+          />
+          <Text
+            style={[
+              styles.charCount,
+              inputText.length === maxInputTextLength && styles.charCountMax,
+            ]}
+          >
+            {inputText.length === maxInputTextLength
+              ? "Max"
+              : `${inputText.length} / Characters`}
+          </Text>
+        </View>
+
+        <View style={styles.rowWrap}>
+          {(["Cut", "Copy", "Paste", "Clear"] as const).map((label) => (
+            <TouchableOpacity
+              key={label}
+              style={styles.actionButton}
+              onPress={actions[label]}
+              accessibilityRole="button"
+            >
+              <Text style={styles.actionButtonText}>{label}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        <View style={styles.checkboxRow}>
+          <Text style={styles.checkboxLabel}>Consider space</Text>
+          <Checkbox
+            color="#007AFF"
+            value={considerSpace}
+            onValueChange={setConsiderSpace}
+            testID="consider-space-checkbox"
+          />
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -165,7 +175,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "700",
     color: "#222",
-    marginBottom: 20,
+    marginBottom: 16,
   },
   row: {
     flexDirection: "row",
@@ -235,7 +245,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
-    marginBottom: 30,
   },
   checkboxLabel: {
     fontSize: 16,
