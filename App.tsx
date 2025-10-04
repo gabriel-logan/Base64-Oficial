@@ -1,8 +1,8 @@
-import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 import { StyleSheet, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import MainPage from "./src/pages/Main";
-import { useEffect } from "react";
 
 SplashScreen.setOptions({
   fade: true,
