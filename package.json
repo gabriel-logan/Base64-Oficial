@@ -12,7 +12,8 @@
     "test": "jest --verbose",
     "test:cov": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "pr-check": "yarn format && yarn lint && yarn test"
+    "pr-check": "yarn format && yarn lint && yarn test",
+    "doctor": "npx expo-doctor"
   },
   "dependencies": {
     "expo": "~53.0.23",
