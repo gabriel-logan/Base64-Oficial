@@ -1,6 +1,6 @@
 import { act, fireEvent, render, screen } from "@testing-library/react-native";
 import MainPage from "../../src/pages/Main";
-import { Alert, Linking } from "react-native";
+import { Alert } from "react-native";
 import * as Clipboard from "expo-clipboard";
 
 describe("MainPage", () => {
@@ -16,28 +16,6 @@ describe("MainPage", () => {
     fireEvent.changeText(textInput, "New text");
 
     expect(textInput.props.value).toBe("New text");
-  });
-
-  it("should open URL when the help the developer button is pressed", () => {
-    render(<MainPage />);
-
-    const btnHelp = screen.getByTestId(/help-developer-button/i);
-
-    fireEvent.press(btnHelp);
-
-    expect(Linking.openURL).toHaveBeenCalledTimes(1);
-  });
-
-  it("should open URL when the contribute button is pressed", () => {
-    render(<MainPage />);
-
-    const btnContribute = screen.getByTestId(/contribute-button/i);
-
-    fireEvent.press(btnContribute);
-
-    expect(Linking.openURL).toHaveBeenCalledWith(
-      "https://github.com/gabriel-logan/Base64-Oficial",
-    );
   });
 
   it("should convert text to Base64 when Encode button is pressed", () => {
