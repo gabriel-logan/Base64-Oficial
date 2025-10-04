@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import MainPage from "./src/pages/Main";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 SplashScreen.setOptions({
   fade: true,
@@ -11,8 +11,6 @@ SplashScreen.setOptions({
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     async function prepare() {
       try {
@@ -21,25 +19,11 @@ export default function App() {
         console.warn(e);
       } finally {
         await SplashScreen.hideAsync();
-        setIsLoading(false);
       }
     }
 
     prepare();
   }, []);
-
-  if (isLoading) {
-    return (
-      <View
-        style={[
-          styles.container,
-          { justifyContent: "center", alignItems: "center" },
-        ]}
-      >
-        <ActivityIndicator size="large" color="#0084ff" />
-      </View>
-    );
-  }
 
   return (
     <View style={styles.container}>
