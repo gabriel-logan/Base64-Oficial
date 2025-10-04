@@ -20,8 +20,8 @@ export default function App() {
       } catch (e) {
         console.warn(e);
       } finally {
-        setIsLoading(false);
         await SplashScreen.hideAsync();
+        setIsLoading(false);
       }
     }
 
