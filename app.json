@@ -39,15 +39,9 @@
             "enablePngCrunchInReleaseBuilds": true,
             "enableProguardInReleaseBuilds": true,
             "enableShrinkResourcesInReleaseBuilds": true,
-            "networkInspector": false
+            "networkInspector": false,
+            "enableBundleCompression": true
           }
-        }
-      ],
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#02bcd4",
-          "image": "./assets/splash.png"
         }
       ]
     ],
