@@ -26,3 +26,7 @@ jobs:
         run: yarn install
       - name: Run tests
         run: yarn pr-check
+      - name: Run expo doctor
+        run: yarn doctor
+      - name: Lint code
+        run: yarn lint
